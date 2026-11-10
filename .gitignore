@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Node
+node_modules/
+frontend/dist/
+
+# Secrets and local config -- never commit
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+
+# Data: keep structure, not contents. Raw/interim/processed data is rebuilt by pipeline scripts.
+data/raw/*
+data/interim/*
+data/processed/*
+!data/raw/.gitkeep
+!data/interim/.gitkeep
+!data/processed/.gitkeep
+# The manifest (URL, checksum, licence per dataset) IS tracked.
+!data/manifest/
+
+# Large binary/geo/tabular files anywhere outside the tracked tests fixtures
+*.parquet
+*.rar
+*.pbf
+*.tif
+*.tiff
+*.zip
+*.xlsx
+*.xls
+!backend/tests/fixtures/**
+
+# Editors / OS
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+*.log

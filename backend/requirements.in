@@ -1,0 +1,11 @@
+# Direct dependencies (top-level). Pinned versions are recorded in requirements.txt.
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+pandas
+geopandas
+pyarrow
+httpx
+pytest
+# ML (scikit-learn, xgboost) is added later, when the forecasting module starts.
