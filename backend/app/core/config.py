@@ -12,11 +12,10 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_prefix="AIRWATCH_", env_file=".env", extra="ignore")
 
-    app_name: str = "AirWatch AI API"
+    app_name: str = "AirWatch API"
     data_dir: Path = REPO_ROOT / "data"
     # Origins allowed to call the API from a browser (Vite dev server by default).
     cors_origins: list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
-
     @property
     def raw_dir(self) -> Path:
         return self.data_dir / "raw"
@@ -28,6 +27,10 @@ class Settings(BaseSettings):
     @property
     def processed_dir(self) -> Path:
         return self.data_dir / "processed"
+
+    @property
+    def manifest_dir(self) -> Path:
+        return self.data_dir / "manifest"
 
 
 settings = Settings()

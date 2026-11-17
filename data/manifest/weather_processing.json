@@ -1,0 +1,286 @@
+{
+  "schema_version": 1,
+  "stage": "phase2_weather",
+  "generated_at_utc": "2026-11-11T05:48:14+00:00",
+  "processing": {
+    "version": "weather-1.0.0",
+    "script": "pipeline/process_weather.py",
+    "python": "3.13.7",
+    "pandas": "3.1.1",
+    "pyarrow": "26.0.1",
+    "platform": "win32"
+  },
+  "source": {
+    "provider": "Open-Meteo",
+    "endpoint": "https://archive-api.open-meteo.com/v1/archive",
+    "model": "era5",
+    "data_kind": "reanalysis (modelled historical weather; not a forecast, not a local measurement)",
+    "spatial_resolution": "about 0.25 degrees (~25 km)",
+    "dataset_version": "not reported by the API"
+  },
+  "request": {
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=42.917&longitude=74.51&start_date=2019-02-06&end_date=2024-06-30&hourly=temperature_2m,relative_humidity_2m,wind_speed_10m,wind_direction_10m,surface_pressure,precipitation,boundary_layer_height&timezone=UTC&wind_speed_unit=ms&temperature_unit=celsius&precipitation_unit=mm&timeformat=iso8601&models=era5",
+    "params": {
+      "latitude": 42.917,
+      "longitude": 74.51,
+      "start_date": "2019-02-06",
+      "end_date": "2024-06-30",
+      "hourly": "temperature_2m,relative_humidity_2m,wind_speed_10m,wind_direction_10m,surface_pressure,precipitation,boundary_layer_height",
+      "timezone": "UTC",
+      "wind_speed_unit": "ms",
+      "temperature_unit": "celsius",
+      "precipitation_unit": "mm",
+      "timeformat": "iso8601",
+      "models": "era5"
+    },
+    "start_date": "2019-02-06",
+    "end_date": "2024-06-30",
+    "period_source": "data/manifest/embassy_processing.json"
+  },
+  "retrieval": {
+    "retrieved_at_utc": "2026-11-11T05:46:34+00:00",
+    "downloaded_in_this_run": false,
+    "http_status": 200,
+    "response_bytes": 2497540,
+    "response_sha256": "5bb4cd0399fb3bb0d22c8643e1a17ffc9fc7ab1f96196d4e728383ef0c19b588",
+    "raw_file": "data/raw/weather/openmeteo_era5_42.917_74.510_2019-02-06_2024-06-30.json",
+    "request_record": "data/raw/weather/openmeteo_era5_42.917_74.510_2019-02-06_2024-06-30.request.json"
+  },
+  "grid": {
+    "requested_latitude": 42.917,
+    "requested_longitude": 74.51,
+    "returned_latitude": 43.0,
+    "returned_longitude": 74.5,
+    "elevation_m": 702.0,
+    "approx_offset_km": 9.264986585086742
+  },
+  "time": {
+    "utc_offset_seconds": 0,
+    "response_timezone": "GMT",
+    "local_timezone": "Asia/Bishkek",
+    "note": "Timestamps are UTC instants; precipitation is the sum of the preceding hour, other variables are instantaneous."
+  },
+  "variables": {
+    "temperature_2m": {
+      "unit": "°C",
+      "label": "Air temperature at 2 m"
+    },
+    "relative_humidity_2m": {
+      "unit": "%",
+      "label": "Relative humidity at 2 m"
+    },
+    "wind_speed_10m": {
+      "unit": "m/s",
+      "label": "Wind speed at 10 m"
+    },
+    "wind_direction_10m": {
+      "unit": "°",
+      "label": "Wind direction at 10 m (from)"
+    },
+    "surface_pressure": {
+      "unit": "hPa",
+      "label": "Surface pressure"
+    },
+    "precipitation": {
+      "unit": "mm",
+      "label": "Precipitation (sum of the preceding hour)"
+    },
+    "boundary_layer_height": {
+      "unit": "m",
+      "label": "Boundary layer height"
+    }
+  },
+  "variables_not_retrieved": [],
+  "validation": {
+    "rows": 47328,
+    "duplicate_timestamps": 0,
+    "monotonic_increasing": true,
+    "first_utc": "2019-02-06T00:00:00+00:00",
+    "last_utc": "2024-06-30T23:00:00+00:00",
+    "first_local": "2019-02-06T06:00:00+06:00",
+    "last_local": "2024-07-01T05:00:00+06:00",
+    "expected_hours": 47328,
+    "distinct_hours_present": 47328,
+    "missing_hours": 0,
+    "hourly_coverage_pct": 100.0,
+    "missing_hour_examples": [],
+    "variables": {
+      "temperature_2m": {
+        "missing_runs": 0,
+        "longest_missing_run_hours": 0,
+        "first_missing_utc": null,
+        "last_missing_utc": null,
+        "unit": "°C",
+        "n_valid": 47328,
+        "n_missing": 0,
+        "pct_valid_of_rows": 100.0,
+        "n_outside_plausible_range": 0,
+        "plausible_range": [
+          -60.0,
+          60.0
+        ],
+        "min": -26.4,
+        "max": 39.8,
+        "mean": 12.414059330628806
+      },
+      "relative_humidity_2m": {
+        "missing_runs": 0,
+        "longest_missing_run_hours": 0,
+        "first_missing_utc": null,
+        "last_missing_utc": null,
+        "unit": "%",
+        "n_valid": 47328,
+        "n_missing": 0,
+        "pct_valid_of_rows": 100.0,
+        "n_outside_plausible_range": 0,
+        "plausible_range": [
+          0.0,
+          100.0
+        ],
+        "min": 8.0,
+        "max": 100.0,
+        "mean": 56.4190753887762
+      },
+      "wind_speed_10m": {
+        "missing_runs": 0,
+        "longest_missing_run_hours": 0,
+        "first_missing_utc": null,
+        "last_missing_utc": null,
+        "unit": "m/s",
+        "n_valid": 47328,
+        "n_missing": 0,
+        "pct_valid_of_rows": 100.0,
+        "n_outside_plausible_range": 0,
+        "plausible_range": [
+          0.0,
+          80.0
+        ],
+        "min": 0.0,
+        "max": 8.31,
+        "mean": 1.4841732167004735
+      },
+      "wind_direction_10m": {
+        "missing_runs": 0,
+        "longest_missing_run_hours": 0,
+        "first_missing_utc": null,
+        "last_missing_utc": null,
+        "unit": "°",
+        "n_valid": 47328,
+        "n_missing": 0,
+        "pct_valid_of_rows": 100.0,
+        "n_outside_plausible_range": 0,
+        "plausible_range": [
+          0.0,
+          360.0
+        ],
+        "min": 1.0,
+        "max": 360.0,
+        "mean": 139.83136832319136
+      },
+      "surface_pressure": {
+        "missing_runs": 0,
+        "longest_missing_run_hours": 0,
+        "first_missing_utc": null,
+        "last_missing_utc": null,
+        "unit": "hPa",
+        "n_valid": 47328,
+        "n_missing": 0,
+        "pct_valid_of_rows": 100.0,
+        "n_outside_plausible_range": 0,
+        "plausible_range": [
+          500.0,
+          1100.0
+        ],
+        "min": 916.8,
+        "max": 963.1,
+        "mean": 935.6153144016226
+      },
+      "precipitation": {
+        "missing_runs": 0,
+        "longest_missing_run_hours": 0,
+        "first_missing_utc": null,
+        "last_missing_utc": null,
+        "unit": "mm",
+        "n_valid": 47328,
+        "n_missing": 0,
+        "pct_valid_of_rows": 100.0,
+        "n_outside_plausible_range": 0,
+        "plausible_range": [
+          0.0,
+          200.0
+        ],
+        "min": 0.0,
+        "max": 7.6,
+        "mean": 0.07311528059499661
+      },
+      "boundary_layer_height": {
+        "missing_runs": 1,
+        "longest_missing_run_hours": 4368,
+        "first_missing_utc": "2024-01-01T00:00:00+00:00",
+        "last_missing_utc": "2024-06-30T23:00:00+00:00",
+        "unit": "m",
+        "n_valid": 42960,
+        "n_missing": 4368,
+        "pct_valid_of_rows": 90.771,
+        "n_outside_plausible_range": 0,
+        "plausible_range": [
+          0.0,
+          6000.0
+        ],
+        "min": 10.0,
+        "max": 3930.0,
+        "mean": 388.5936918063315
+      }
+    }
+  },
+  "coverage": {
+    "exact_duplicates_collapsed": 0,
+    "conflicting_duplicate_timestamps": 0
+  },
+  "outputs": {
+    "interim_parsed": {
+      "path": "data/interim/weather/era5_hourly_parsed.parquet",
+      "status": "unchanged",
+      "sha256": "0e6785b9d9f6efd11994447f19046958436be697b50c5bcdbce9435af526b563",
+      "bytes": 1174114
+    },
+    "processed_hourly": {
+      "path": "data/processed/weather/era5_hourly.parquet",
+      "status": "unchanged",
+      "sha256": "aa65909995bb0886278d14f3ec0dc1ef3c1e3552ccae5d467fec64432e364a53",
+      "bytes": 1174767
+    },
+    "report": {
+      "path": "data/interim/weather/weather_validation_report.md",
+      "status": "overwritten_with_approval",
+      "sha256": "0db7a07fc8976041e7f75f3086f987e61940ceb76b7e46e489f7cb23f819b2fe",
+      "bytes": 4825
+    }
+  },
+  "decisions": [
+    "Dataset: ERA5 reanalysis requested explicitly with models=era5 through the Open-Meteo Historical Weather API. The API default ('best match') blends several models and is not used. ERA5-Land was tested and rejected because it returns no wind, pressure, precipitation or boundary-layer height; no other dataset is substituted.",
+    "Time: requested with timezone=UTC so every timestamp is an unambiguous instant; Asia/Bishkek (UTC+6, no daylight saving) is derived from it. Rows are kept as delivered (ordering and duplicates preserved in the interim file).",
+    "Units: wind speed requested in m/s (the API default is km/h). The returned unit strings are checked against the expected ones and the run fails rather than converting silently.",
+    "Precipitation is the sum over the PRECEDING hour (so a row stamped T describes T-1h..T); the other variables are instantaneous values at T.",
+    "Missing values stay missing. Nothing is interpolated, filled or clipped; out-of-range values are counted in the report but not altered.",
+    "Duplicate timestamps: identical duplicates are collapsed to one row; conflicting duplicates would have their values set to missing and be counted (none occur unless the report says so).",
+    "The ERA5 cell (about 0.25 degrees, ~25 km) is NOT a measurement at the requested point; the returned grid coordinates are recorded."
+  ],
+  "known_limitations": [
+    "ERA5 is reanalysis (a model-assimilated reconstruction of past weather), not a forecast and not a local weather-station record. At ~25 km resolution it cannot resolve Bishkek's valley, urban heat island or local drainage winds.",
+    "The returned grid cell is centred away from the requested point (see manifest 'grid'); Open-Meteo also adjusts some variables to the requested elevation using a 90 m terrain model.",
+    "Boundary layer height is a model diagnostic with coarse vertical resolution; treat it as indicative, especially in stable winter conditions.",
+    "Weather data are associated with PM2.5 only statistically. No causal claim is supported by this dataset.",
+    "The free Open-Meteo API is for NON-COMMERCIAL use only; a commercial deployment needs a paid API key. Data are CC BY 4.0 and the attribution below must accompany any display.",
+    "boundary_layer_height has 4,368 missing hours (2024-01-01T00:00:00+00:00 to 2024-06-30T23:00:00+00:00, UTC) in the ERA5 response; they are not filled."
+  ],
+  "licence": {
+    "data": "CC BY 4.0 (Open-Meteo)",
+    "attribution": {
+      "open_meteo": "Weather data by Open-Meteo.com (https://open-meteo.com/), CC BY 4.0.",
+      "copernicus": "Generated using Copernicus Climate Change Service information (ERA5, Hersbach et al., 2023). Neither the European Commission nor ECMWF is responsible for any use of this information.",
+      "citation": "Zippenfenig, P. (2023). Open-Meteo.com Weather API. Zenodo. https://doi.org/10.5281/ZENODO.7970649"
+    },
+    "usage": "Free API: non-commercial use only; commercial use requires a paid API key."
+  }
+}

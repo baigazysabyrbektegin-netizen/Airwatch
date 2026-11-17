@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-11-10T20:18:28+00:00",
+  "pipeline": {
+    "name": "airwatch-ingest-zenodo",
+    "version": "0.1.0",
+    "python": "3.13.7",
+    "httpx": "0.28.1"
+  },
+  "record": {
+    "record_id": 12720883,
+    "doi": "10.5281/zenodo.12720883",
+    "concept_doi": "10.5281/zenodo.12720882",
+    "title": "A Multi-Pollutant Emissions Inventory for Air Pollution Modeling and Supporting Information for Bishkek",
+    "publication_date": "2024-07-11",
+    "version": null,
+    "version_note": "Not provided by Zenodo.",
+    "created": "2024-07-11T09:03:02.072127+00:00",
+    "updated": "2024-12-28T05:09:47.069669+00:00",
+    "record_url": "https://zenodo.org/records/12720883",
+    "api_url": "https://zenodo.org/api/records/12720883",
+    "doi_url": "https://doi.org/10.5281/zenodo.12720883",
+    "retrieved_at_utc": "2026-11-10T20:18:27+00:00",
+    "access_right": "open",
+    "resource_type": "dataset",
+    "licence": {
+      "id": "cc-by-4.0"
+    },
+    "creators": [
+      {
+        "name": "Guttikunda, Sarath",
+        "affiliation": null,
+        "orcid": "0000-0003-4507-5199"
+      }
+    ],
+    "related_identifiers": null,
+    "description_text": "Full paper is published here\nhttps://doi.org/10.3390/air2040021\nMapping PM2.5 Sources and Emission Management Options for Bishkek, Kyrgyzstan\n****\nHarsh winters, aging infrastructure and control technologies, and the increasing demand for urbanization and modernization of amenities are major factors contributing to the deteriorating air quality in Bishkek, the capital city of Kyrgyzstan and a burgeoning economic hub in Central Asia. The heating energy needs are met via combustion of coal at the central heating plant, heat only boilers, and in-situ heating equipment and the mobility needs via combustion of diesel and petrol. Other mapped sources contributing to daily air pollution levels in Bishkek’s airshed include 30 km2 of industrial area, 16 large open combustion brick kilns, a vehicle fleet with average age more than 10 years, 7.5 km2 of quarries, and one landfill. Annual PM2.5 emission load for the airshed is approximately 5,500 tons, resulting in an annual average concentration of 48 ug/m3, which is 9-10 times higher than the World Health Organization (WHO) guideline of 5 ug/m3. Wintertime daily averages range from 200-300 ug/m3. Proposed emissions management policies for the city include shift to clean fuels like gas and electricity at the heating plants and households, restricting the secondhand vehicle imports and incentivizing newer standard vehicles, promotion of public transport system with newer buses, at least doubling of the waste collection efficiency and landfill management capacity and encouraging greening and maintaining road infrastructure to control dust emissions. PM2.5 levels from mid- to long-term implementation of these options is expected to drop by 50-70%. A long-term plan for Bishkek must include an expansion of the ambient monitoring network using a combination of reference-grade and low-cost sensors to track progress of air quality management efforts and to support information dissemination for public awareness.\nFiles included here:\nComposite presentation of supporting information and analysis results\nFile: Bishkek_AQ_Analysis_Composite.pptx\nThis presentation includes summary images of\nmonitoring data\nthe GIS fields\ngoogle earth scans\nannual and monthly emissions\nannual and monthly PM2.5 concentrations\nannual and monthly source apportionment\nMeteorological data summary for the airshed, extracted from the WRF sumulations\nFile: Bishkek_Met_Summary.pptx\nFile: bishkek_meteorology_stats.xlsm (activate macros for stats and making images for final use)\nGIS files\nFile: gis_bishkek-grids-pop.rar (shapefile and KML file for the airshed grid, csv file for gridded population 20 years, and images)\nFile: gis_bishkek_roads.rar (shapefiles extracted from openstreetmaps)\nFile: gis_bishkek_adm0.rar (shapefiles of administrative boundaries)\nFile: gis_bishkek_multiplelayers.rar (as KML files - districts, townships, main_roads, water_bodies, quarries, landfill, industrial_areas)\nCAMx output (units is ug/m3)\nFile: bishkek_camx_pm25_monthlyavg.csv (see the grid file for mapping)\nGridded model-ready emissions inventory\nFile: bishkek_gridded_emissions_2018.rar (see the grid file for mapping)\nFormat: ix,iy,midlong,midlat,FPRM,CPRM,BC,OC,NO,NO2,CO,SO2\nUnits: tons/grid/year\nPM2.5 emissions = FPRM + BC + OC\nPM10 emissions = FRPM + BC + OC + CPRM\nmidlong and midlat are midpoints of grids - see gis_bishkek-grids-pop.rar\nAmbient monitoring data\nFile: bishkek_monitoring_claritysensor_2021.xlsx\nFile: bishkek_monitoring_us.embassy2019-2024.rar"
+  },
+  "files_count": 13,
+  "files_total_bytes": 60674326,
+  "files_failed": 0,
+  "files": [
+    {
+      "filename": "Bishkek_AQ_Analysis_Composite.pptx",
+      "extension": "pptx",
+      "size_bytes": 29759749,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "4845bdac03022c1074022b9e8e87fb1a"
+      },
+      "calculated_checksums": {
+        "md5": "4845bdac03022c1074022b9e8e87fb1a",
+        "sha256": "5beb6e635a78836c41d0099bfb6699913bf17ce9740cfdb00adb653b63bef585"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/Bishkek_AQ_Analysis_Composite.pptx/content",
+      "local_path": "data/raw/zenodo_12720883/Bishkek_AQ_Analysis_Composite.pptx",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:15:58+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "Composite presentation of supporting information and analysis results\nFile: Bishkek_AQ_Analysis_Composite.pptx\nThis presentation includes summary images of\nmonitoring data\nthe GIS fields\ngoogle earth scans\nannual and monthly emissions\nannual and monthly PM2.5 concentrations\nannual and monthly source apportionment\nMeteorological data summary for the airshed, extracted from the WRF sumulations",
+        "third_party_origin_indicated": true,
+        "third_party_markers_found": [
+          "google earth"
+        ],
+        "review_required": true,
+        "review_note": "Record text indicates a possible third-party origin or an external input; upstream terms are not stated in the Zenodo metadata."
+      }
+    },
+    {
+      "filename": "Bishkek_Met_Summary.pptx",
+      "extension": "pptx",
+      "size_bytes": 7636037,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "908fd298c6ea8e5b9229a19edf8f0912"
+      },
+      "calculated_checksums": {
+        "md5": "908fd298c6ea8e5b9229a19edf8f0912",
+        "sha256": "0c7136cb25f40e0c17dea30e4db1158a61d355f9ccaed4f756e4aac151bfca7d"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/Bishkek_Met_Summary.pptx/content",
+      "local_path": "data/raw/zenodo_12720883/Bishkek_Met_Summary.pptx",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:05+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "Meteorological data summary for the airshed, extracted from the WRF sumulations\nFile: Bishkek_Met_Summary.pptx",
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "Record text names no third-party origin; upstream inputs and terms are still not documented. Absence of a keyword is not confirmation of provenance."
+      }
+    },
+    {
+      "filename": "bishkek_camx_pm25_monthlyavg.csv",
+      "extension": "csv",
+      "size_bytes": 151804,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "f18ef07f746041245c28dd47a5d5e6b8"
+      },
+      "calculated_checksums": {
+        "md5": "f18ef07f746041245c28dd47a5d5e6b8",
+        "sha256": "e76a9e6bfd1d2fd65b70ee20e17eadebd4794719a6629c07c7be33f073b4fc53"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/bishkek_camx_pm25_monthlyavg.csv/content",
+      "local_path": "data/raw/zenodo_12720883/bishkek_camx_pm25_monthlyavg.csv",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:05+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "CAMx output (units is ug/m3)\nFile: bishkek_camx_pm25_monthlyavg.csv (see the grid file for mapping)\nGridded model-ready emissions inventory",
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "Record text names no third-party origin; upstream inputs and terms are still not documented. Absence of a keyword is not confirmation of provenance."
+      }
+    },
+    {
+      "filename": "stitched_bishkek_monthlypmsa_2018.png",
+      "extension": "png",
+      "size_bytes": 798527,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "dd325cd23ddb10330eeb3acc27f1cf66"
+      },
+      "calculated_checksums": {
+        "md5": "dd325cd23ddb10330eeb3acc27f1cf66",
+        "sha256": "441b9980f908cd49d95a7fcfdb44ab3a80344908772184f4d525ffa808015fe8"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/stitched_bishkek_monthlypmsa_2018.png/content",
+      "local_path": "data/raw/zenodo_12720883/stitched_bishkek_monthlypmsa_2018.png",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:06+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": null,
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "The record does not mention this file; origin unknown."
+      }
+    },
+    {
+      "filename": "gis_bishkek-grids-pop.rar",
+      "extension": "rar",
+      "size_bytes": 1925775,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "3b8444cc201551a946da46753fb9660b"
+      },
+      "calculated_checksums": {
+        "md5": "3b8444cc201551a946da46753fb9660b",
+        "sha256": "72579813adc89cabfc73d06e35b4cd3a0e7d6260535051a452e32908e4bad27f"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/gis_bishkek-grids-pop.rar/content",
+      "local_path": "data/raw/zenodo_12720883/gis_bishkek-grids-pop.rar",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:08+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "GIS files\nFile: gis_bishkek-grids-pop.rar (shapefile and KML file for the airshed grid, csv file for gridded population 20 years, and images)\nPM10 emissions = FRPM + BC + OC + CPRM\nmidlong and midlat are midpoints of grids - see gis_bishkek-grids-pop.rar\nAmbient monitoring data",
+        "third_party_origin_indicated": true,
+        "third_party_markers_found": [
+          "population"
+        ],
+        "review_required": true,
+        "review_note": "Record text indicates a possible third-party origin or an external input; upstream terms are not stated in the Zenodo metadata."
+      }
+    },
+    {
+      "filename": "bishkek_meteorology_stats.xlsm",
+      "extension": "xlsm",
+      "size_bytes": 3055056,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "b737eddcbfd33a1d247e33eb7d08c585"
+      },
+      "calculated_checksums": {
+        "md5": "b737eddcbfd33a1d247e33eb7d08c585",
+        "sha256": "40bbcf2993432cc190c74c9a9b8a7af173a38390d124ea9650c5eb3ac33d5b53"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/bishkek_meteorology_stats.xlsm/content",
+      "local_path": "data/raw/zenodo_12720883/bishkek_meteorology_stats.xlsm",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:13+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "Meteorological data summary for the airshed, extracted from the WRF sumulations\nFile: bishkek_meteorology_stats.xlsm (activate macros for stats and making images for final use)\nGIS files",
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "Record text names no third-party origin; upstream inputs and terms are still not documented. Absence of a keyword is not confirmation of provenance."
+      }
+    },
+    {
+      "filename": "gis_bishkek_adm0.rar",
+      "extension": "rar",
+      "size_bytes": 9994,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "29c2e8ba7f2798e7dd48ecf2eda0438c"
+      },
+      "calculated_checksums": {
+        "md5": "29c2e8ba7f2798e7dd48ecf2eda0438c",
+        "sha256": "33d11397fed0082406a9ae15cb74fab1e9bbcab19c562c0027122646164dd750"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/gis_bishkek_adm0.rar/content",
+      "local_path": "data/raw/zenodo_12720883/gis_bishkek_adm0.rar",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:13+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "GIS files\nFile: gis_bishkek_adm0.rar (shapefiles of administrative boundaries)",
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "Record text names no third-party origin; upstream inputs and terms are still not documented. Absence of a keyword is not confirmation of provenance."
+      }
+    },
+    {
+      "filename": "gis_bishkek_roads.rar",
+      "extension": "rar",
+      "size_bytes": 1540900,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "c329dd2cce22e26be1b8c245799f4829"
+      },
+      "calculated_checksums": {
+        "md5": "c329dd2cce22e26be1b8c245799f4829",
+        "sha256": "d38918fc0276de6a4f52dbb1291c622220f1d70e0d6cd86b6179532d913fbca1"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/gis_bishkek_roads.rar/content",
+      "local_path": "data/raw/zenodo_12720883/gis_bishkek_roads.rar",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:15+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "GIS files\nFile: gis_bishkek_roads.rar (shapefiles extracted from openstreetmaps)",
+        "third_party_origin_indicated": true,
+        "third_party_markers_found": [
+          "openstreetmap"
+        ],
+        "review_required": true,
+        "review_note": "Record text indicates a possible third-party origin or an external input; upstream terms are not stated in the Zenodo metadata."
+      }
+    },
+    {
+      "filename": "gis_bishkek_multiplelayers.rar",
+      "extension": "rar",
+      "size_bytes": 34640,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "a37aeb2eff995173c21a963eb93014ff"
+      },
+      "calculated_checksums": {
+        "md5": "a37aeb2eff995173c21a963eb93014ff",
+        "sha256": "df5f755f6c1b3eccaf00db93fd35300da0d3cfa747de66c28ae04dcd49341593"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/gis_bishkek_multiplelayers.rar/content",
+      "local_path": "data/raw/zenodo_12720883/gis_bishkek_multiplelayers.rar",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:15+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "GIS files\nFile: gis_bishkek_multiplelayers.rar (as KML files - districts, townships, main_roads, water_bodies, quarries, landfill, industrial_areas)\nCAMx output (units is ug/m3)",
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "Record text names no third-party origin; upstream inputs and terms are still not documented. Absence of a keyword is not confirmation of provenance."
+      }
+    },
+    {
+      "filename": "stitched_bishkek_monthly_2018_3by4.png",
+      "extension": "png",
+      "size_bytes": 648758,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "e2a53b86406088ac8211a8716c71ba39"
+      },
+      "calculated_checksums": {
+        "md5": "e2a53b86406088ac8211a8716c71ba39",
+        "sha256": "5e8bf2a1c18b0e855c3371df4375014d0032eb8f5b4da0b96d5ce8c028e98a8c"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/stitched_bishkek_monthly_2018_3by4.png/content",
+      "local_path": "data/raw/zenodo_12720883/stitched_bishkek_monthly_2018_3by4.png",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:16+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": null,
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "The record does not mention this file; origin unknown."
+      }
+    },
+    {
+      "filename": "bishkek_monitoring_claritysensor_2021.xlsx",
+      "extension": "xlsx",
+      "size_bytes": 12162062,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "5199716597b88c569559e9c3d3b56a42"
+      },
+      "calculated_checksums": {
+        "md5": "5199716597b88c569559e9c3d3b56a42",
+        "sha256": "6cb04f08a763c74b1c1919ceddfe79df6a08c52c7c92065977ce08800af48505"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/bishkek_monitoring_claritysensor_2021.xlsx/content",
+      "local_path": "data/raw/zenodo_12720883/bishkek_monitoring_claritysensor_2021.xlsx",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:28+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "Ambient monitoring data\nFile: bishkek_monitoring_claritysensor_2021.xlsx",
+        "third_party_origin_indicated": true,
+        "third_party_markers_found": [
+          "clarity"
+        ],
+        "review_required": true,
+        "review_note": "Record text indicates a possible third-party origin or an external input; upstream terms are not stated in the Zenodo metadata."
+      }
+    },
+    {
+      "filename": "bishkek_monitoring_us.embassy2019-2024.rar",
+      "extension": "rar",
+      "size_bytes": 393949,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "0a0514301246f3892d21e2171f765632"
+      },
+      "calculated_checksums": {
+        "md5": "0a0514301246f3892d21e2171f765632",
+        "sha256": "381c66b92f1cbc631684ba2f9b90474acaf0b5afa7983bb025af0664c46df8c8"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/bishkek_monitoring_us.embassy2019-2024.rar/content",
+      "local_path": "data/raw/zenodo_12720883/bishkek_monitoring_us.embassy2019-2024.rar",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:29+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "Ambient monitoring data\nFile: bishkek_monitoring_us.embassy2019-2024.rar",
+        "third_party_origin_indicated": true,
+        "third_party_markers_found": [
+          "embassy"
+        ],
+        "review_required": true,
+        "review_note": "Record text indicates a possible third-party origin or an external input; upstream terms are not stated in the Zenodo metadata."
+      }
+    },
+    {
+      "filename": "bishkek_gridded_emissions_2018.rar",
+      "extension": "rar",
+      "size_bytes": 2557075,
+      "zenodo_checksum": {
+        "algorithm": "md5",
+        "value": "17934e9b431675ea1f6dadc33f4bbddc"
+      },
+      "calculated_checksums": {
+        "md5": "17934e9b431675ea1f6dadc33f4bbddc",
+        "sha256": "1c95db08856779b25b1caff06b6938fab4acd76d29038dbe0ab1be2714756e8c"
+      },
+      "checksum_verified": true,
+      "download_url": "https://zenodo.org/api/records/12720883/files/bishkek_gridded_emissions_2018.rar/content",
+      "local_path": "data/raw/zenodo_12720883/bishkek_gridded_emissions_2018.rar",
+      "download_status": "already_present_verified",
+      "downloaded_at_utc": "2026-11-10T20:16:32+00:00",
+      "verified_at_utc": "2026-11-10T20:18:28+00:00",
+      "error": null,
+      "notes": [],
+      "licence": {
+        "record_level_licence_id": "cc-by-4.0",
+        "record_level_licence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "licence_url_note": "Derived from the licence id; Zenodo metadata supplies the id only.",
+        "file_specific_licence": null,
+        "file_specific_note": "Zenodo metadata states no file-specific licence for this file.",
+        "attribution_required": true
+      },
+      "provenance": {
+        "record_text_near_file": "Gridded model-ready emissions inventory\nFile: bishkek_gridded_emissions_2018.rar (see the grid file for mapping)\nFormat: ix,iy,midlong,midlat,FPRM,CPRM,BC,OC,NO,NO2,CO,SO2\nUnits: tons/grid/year\nPM2.5 emissions = FPRM + BC + OC\nPM10 emissions = FRPM + BC + OC + CPRM\nmidlong and midlat are midpoints of grids - see gis_bishkek-grids-pop.rar\nAmbient monitoring data",
+        "third_party_origin_indicated": false,
+        "third_party_markers_found": [],
+        "review_required": true,
+        "review_note": "Record text names no third-party origin; upstream inputs and terms are still not documented. Absence of a keyword is not confirmation of provenance."
+      }
+    }
+  ]
+}

@@ -1,0 +1,1158 @@
+{
+  "schema_version": 1,
+  "stage": "clarity_pm25_processing",
+  "generated_at_utc": "2026-11-10T21:32:21+00:00",
+  "processing": {
+    "script": "pipeline/process_clarity.py",
+    "version": "clarity-clean-1.0.0",
+    "python": "3.13.7",
+    "pandas": "3.1.1",
+    "pyarrow": "26.0.1",
+    "xlsx_reader": "pipeline/xlsx_reader.py (stdlib zipfile + XML; no extra dependency)"
+  },
+  "source": {
+    "filename": "bishkek_monitoring_claritysensor_2021.xlsx",
+    "local_path": "data/raw/zenodo_12720883/bishkek_monitoring_claritysensor_2021.xlsx",
+    "zenodo_record_id": 12720883,
+    "doi": "10.5281/zenodo.12720883",
+    "size_bytes": 12162062,
+    "zenodo_checksum": {
+      "algorithm": "md5",
+      "value": "5199716597b88c569559e9c3d3b56a42"
+    },
+    "md5": "5199716597b88c569559e9c3d3b56a42",
+    "sha256": "6cb04f08a763c74b1c1919ceddfe79df6a08c52c7c92065977ce08800af48505",
+    "verified_against_zenodo_manifest": true,
+    "zenodo_manifest": "data/manifest/zenodo_12720883.json",
+    "opened_read_only": true
+  },
+  "licence": {
+    "record_level_licence": {
+      "id": "cc-by-4.0"
+    },
+    "attribution_required": true,
+    "attribution": "Guttikunda, S. (2024). A Multi-Pollutant Emissions Inventory for Air Pollution Modeling and Supporting Information for Bishkek. Zenodo. doi:10.5281/zenodo.12720883 (CC BY 4.0).",
+    "provenance_review_required": true,
+    "status": "Record-level CC BY 4.0 only; the Clarity data provider's own terms are not documented in the record."
+  },
+  "workbook": {
+    "sheet_names": [
+      "2021",
+      "pivot",
+      "monthly",
+      "hourly1",
+      "hourly2",
+      "locations",
+      "quadrant_monthly"
+    ],
+    "sheets": [
+      {
+        "sheet": "2021",
+        "state": "visible",
+        "dimension": "A1:G242143",
+        "rows_in_file": 242143,
+        "formula_cells": 231316,
+        "columns_with_values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "non_empty_cells": 1619219
+      },
+      {
+        "sheet": "pivot",
+        "state": "visible",
+        "dimension": "A3:M9",
+        "rows_in_file": 7,
+        "formula_cells": 0,
+        "columns_with_values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M"
+        ],
+        "non_empty_cells": 80
+      },
+      {
+        "sheet": "monthly",
+        "state": "visible",
+        "dimension": "A5:O48",
+        "rows_in_file": 42,
+        "formula_cells": 40,
+        "columns_with_values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N"
+        ],
+        "non_empty_cells": 494
+      },
+      {
+        "sheet": "hourly1",
+        "state": "visible",
+        "dimension": "A5:Z46",
+        "rows_in_file": 40,
+        "formula_cells": 48,
+        "columns_with_values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "non_empty_cells": 981
+      },
+      {
+        "sheet": "hourly2",
+        "state": "visible",
+        "dimension": "B5:Z25",
+        "rows_in_file": 19,
+        "formula_cells": 48,
+        "columns_with_values": [
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R",
+          "S",
+          "T",
+          "U",
+          "V",
+          "W",
+          "X",
+          "Y",
+          "Z"
+        ],
+        "non_empty_cells": 375
+      },
+      {
+        "sheet": "locations",
+        "state": "visible",
+        "dimension": "A1:R57",
+        "rows_in_file": 57,
+        "formula_cells": 383,
+        "columns_with_values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "M",
+          "N",
+          "O",
+          "P",
+          "Q",
+          "R"
+        ],
+        "non_empty_cells": 653
+      },
+      {
+        "sheet": "quadrant_monthly",
+        "state": "visible",
+        "dimension": "A5:O24",
+        "rows_in_file": 7,
+        "formula_cells": 0,
+        "columns_with_values": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G",
+          "H",
+          "I",
+          "J",
+          "K",
+          "L",
+          "M",
+          "N"
+        ],
+        "non_empty_cells": 71
+      }
+    ],
+    "tables": [
+      {
+        "part": "xl/tables/table1.xml",
+        "name": "Table1",
+        "ref": "A1:G231317"
+      }
+    ],
+    "data_sheet_rows": {
+      "data_sheet_rows_excluding_header": 242142,
+      "blank_rows": 10826,
+      "blank_rows_first_excel_row": 231318,
+      "blank_rows_last_excel_row": 242143,
+      "records": 231316,
+      "table1_declared_ref": "A1:G231317",
+      "table1_declared_data_rows": 231316,
+      "quality_flag_counts": {
+        "VALID": 231316,
+        "BLANK_ROW": 10826
+      },
+      "valid_readings": 231316,
+      "invalid_or_excluded_records": 0,
+      "records_with_empty_hour": 0,
+      "records_with_empty_pm25": 0,
+      "time_issue_counts": {},
+      "duplicate_device_hour_rows": 0,
+      "duplicate_conflict_rows": 0,
+      "unknown_device_records": 0
+    },
+    "doc_properties": {
+      "core.xml:creator": "EARM",
+      "core.xml:lastModifiedBy": "Sarath",
+      "core.xml:created": "2022-07-12T08:26:59Z",
+      "core.xml:modified": "2022-11-27T13:13:13Z",
+      "app.xml:Application": "Microsoft Excel",
+      "app.xml:DocSecurity": "0",
+      "app.xml:ScaleCrop": "false",
+      "app.xml:lpstr": "quadrant_monthly",
+      "app.xml:i4": "7",
+      "app.xml:LinksUpToDate": "false",
+      "app.xml:SharedDoc": "false",
+      "app.xml:HyperlinksChanged": "false",
+      "app.xml:AppVersion": "16.0300"
+    }
+  },
+  "extraction": {
+    "output_dir": "data/interim/clarity/extracted",
+    "files": [
+      {
+        "sheet": "2021",
+        "filename": "sheet_2021.csv",
+        "rows": 242142,
+        "size_bytes": 9032896,
+        "sha256": "cf61e50fc697a4212e48c0f9d4cc0c62c6a2490ef8222f42974b5c7ea72b6b9f",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/clarity/extracted/sheet_2021.csv",
+        "extracted_at_utc": "2026-11-10T21:30:34+00:00"
+      },
+      {
+        "sheet": "pivot",
+        "filename": "sheet_pivot.csv",
+        "rows": 7,
+        "size_bytes": 1299,
+        "sha256": "9c56a9777e8e90692ddfc8fb193c0309903369f73769e733824281d7721cf226",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/clarity/extracted/sheet_pivot.csv",
+        "extracted_at_utc": "2026-11-10T21:30:34+00:00"
+      },
+      {
+        "sheet": "monthly",
+        "filename": "sheet_monthly.csv",
+        "rows": 42,
+        "size_bytes": 8327,
+        "sha256": "9cadab2be591bfe19432ddbe9dc1fb414eb5597ddf953b4df9b20420b11ffc7d",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/clarity/extracted/sheet_monthly.csv",
+        "extracted_at_utc": "2026-11-10T21:30:34+00:00"
+      },
+      {
+        "sheet": "hourly1",
+        "filename": "sheet_hourly1.csv",
+        "rows": 40,
+        "size_bytes": 17092,
+        "sha256": "d63f07af03696790977f35120df938516cfd0904c3aab8c632d1e4365786a957",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/clarity/extracted/sheet_hourly1.csv",
+        "extracted_at_utc": "2026-11-10T21:30:34+00:00"
+      },
+      {
+        "sheet": "hourly2",
+        "filename": "sheet_hourly2.csv",
+        "rows": 19,
+        "size_bytes": 6355,
+        "sha256": "561a2ce976c262c2bf161527a2437f7dbb9cc57a1ae551241073fcddec3da610",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/clarity/extracted/sheet_hourly2.csv",
+        "extracted_at_utc": "2026-11-10T21:30:34+00:00"
+      },
+      {
+        "sheet": "locations",
+        "filename": "sheet_locations.csv",
+        "rows": 57,
+        "size_bytes": 4289,
+        "sha256": "1f0e7efd79005a5821794f1b789cc5f206c8419ad00fa1f6e81868edb2fadc39",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/clarity/extracted/sheet_locations.csv",
+        "extracted_at_utc": "2026-11-10T21:30:34+00:00"
+      },
+      {
+        "sheet": "quadrant_monthly",
+        "filename": "sheet_quadrant_monthly.csv",
+        "rows": 7,
+        "size_bytes": 1100,
+        "sha256": "171dc567e5168d65399ae9f8aa9fd33aa70c21664bcaf2fadaa2e2c1675a581c",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/clarity/extracted/sheet_quadrant_monthly.csv",
+        "extracted_at_utc": "2026-11-10T21:30:34+00:00"
+      }
+    ]
+  },
+  "timestamp_assumptions": {
+    "hour_convention": "hour_ending",
+    "source_timezone": "Asia/Bishkek",
+    "extra_shift_hours": 0,
+    "hour_label_range": [
+      1,
+      24
+    ],
+    "status": "ASSUMPTION - the source does not document the convention or the time zone",
+    "mapping": "label instant = local midnight of (year,month,day) + hour hours (hour 24 -> 00:00 next day); interval start = label instant - 1 h (hour-ending); then + 0 h extra shift (0 = none)"
+  },
+  "config": {
+    "hour_convention": "hour_ending",
+    "source_timezone": "Asia/Bishkek",
+    "extra_shift_hours": 0,
+    "hour_label_min": 1,
+    "hour_label_max": 24,
+    "high_value_ugm3": 500.0,
+    "neighbor_ratio": 5.0,
+    "neighbor_min_others": 5,
+    "daily_min_valid_hours": 18,
+    "monthly_min_day_fraction": 0.75,
+    "low_coverage_pct": 85.0,
+    "drift_min_months": 6,
+    "drift_min_abs_rho": 0.8,
+    "drift_min_range_ratio": 1.5,
+    "quadrant_lat": 42.87,
+    "quadrant_lon": 74.6,
+    "domain_lat": [
+      42.7,
+      43.1
+    ],
+    "domain_lon": [
+      74.35,
+      74.85
+    ]
+  },
+  "cleaning_rules": [
+    "The workbook is opened read-only; every cell is read as the text stored in the file (numbers keep their stored digits). Formula cells contribute their cached value.",
+    "Data sheet rows with no value in any of the 7 columns are blank rows (outside the declared table range A1:G231317); they are kept in the audit dataset as BLANK_ROW and are not records.",
+    "The `Quadrant` column is a spreadsheet formula (lookup into `locations`), not a source measurement; it is preserved but not used. A quadrant is re-derived from coordinates with the workbook's own thresholds only for the inventory.",
+    "year/month/day/hour must be integer text; hour must be within the configured label range (1-24); the date must exist. Failing records get TIME_INVALID with a reason and stay in the audit dataset with no timestamp.",
+    "Timestamp interpretation is a CONFIGURABLE ASSUMPTION (hour_convention, source_timezone, extra_shift_hours); the defaults are provisional and recorded in every output. No reading is shifted to match the Embassy series.",
+    "Hour 24 maps to 00:00 of the following day as the label instant. Local time is Asia/Bishkek (UTC+6, no daylight saving); UTC is stored as well.",
+    "PM2.5 is the numeric value of `PM25`. Missing or non-numeric values are never turned into zero; such records stay in the audit dataset (PM_MISSING / PM_NONNUMERIC). Values are not calibrated, corrected, smoothed or filled.",
+    "Readings above 500 ug/m3 are flagged (flag_high_value). A reading above 5x the median of the other sensors in the same interval (when at least 5 others report) is flagged as an outlier candidate (flag_neighbor_outlier). Neither flag removes anything.",
+    "Duplicate (device, interval) records: identical values keep the first; different values are a conflict (DUP_CONFLICT) and are excluded from the analysis table. None occur in this file.",
+    "Devices are matched to coordinates only through the `locations` sheet. Coordinates are kept as the original text and as parsed numbers; none are inferred from device IDs or quadrant labels.",
+    "Devices listed in `locations` without readings are kept in the inventory with status no_data_in_file and are not treated as active sensors.",
+    "Daily mean: 24 intervals starting on a local calendar date; requires at least 18 valid hours. Monthly mean: mean of valid daily means; requires at least 75% of the eligible days (days of that month inside the file's date range).",
+    "The hourly analysis table contains only valid readings (one row per device and interval); gaps are not filled."
+  ],
+  "quality_flags": {
+    "VALID": "usable reading with a valid timestamp and known device",
+    "BLANK_ROW": "worksheet row with no values (not a measurement)",
+    "TIME_INVALID": "missing/invalid year, month, day or hour",
+    "DEVICE_MISSING": "no device id",
+    "PM_MISSING": "no PM2.5 value",
+    "PM_NONNUMERIC": "PM2.5 present but not numeric",
+    "UNKNOWN_DEVICE": "device not in the locations sheet",
+    "DUP_CONFLICT": "same device and interval with different values",
+    "flag_high_value": "PM2.5 above the high-value threshold (kept)",
+    "flag_neighbor_outlier": "above 5x the median of other sensors the same interval (kept)"
+  },
+  "device_inventory": [
+    {
+      "device_id": "A0L6WC6K",
+      "latitude_src": "42.884007099999998",
+      "longitude_src": "74.646954100000002",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7159,
+      "n_valid_readings": 7159,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "A217W1TD",
+      "latitude_src": "42.907018000000001",
+      "longitude_src": "74.598321999999996",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7191,
+      "n_valid_readings": 7191,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "A2T6HRHN",
+      "latitude_src": "42.811719699999998",
+      "longitude_src": "74.640913100000006",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6675,
+      "n_valid_readings": 6675,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "A3Q071PW",
+      "latitude_src": "42.860757",
+      "longitude_src": "74.525047999999998",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": true,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "A4W69CQY",
+      "latitude_src": "42.874616000000003",
+      "longitude_src": "74.609089999999995",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6929,
+      "n_valid_readings": 6929,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "A54YLL8Q",
+      "latitude_src": "42.814186999999997",
+      "longitude_src": "74.571462299999993",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7038,
+      "n_valid_readings": 7038,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "A5B4T3WT",
+      "latitude_src": "42.907302999999999",
+      "longitude_src": "74.639438999999996",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7098,
+      "n_valid_readings": 7098,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "A5CDDRVS",
+      "latitude_src": "42.875312999999998",
+      "longitude_src": "74.654148000000006",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7006,
+      "n_valid_readings": 7006,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "A5NBYDFT",
+      "latitude_src": "42.870337999999997",
+      "longitude_src": "74.587935999999999",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6878,
+      "n_valid_readings": 6878,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "A6R729WH",
+      "latitude_src": "42.853307000000001",
+      "longitude_src": "74.669630999999995",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7066,
+      "n_valid_readings": 7066,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "A72WCG1S",
+      "latitude_src": "42.933788",
+      "longitude_src": "74.594441000000003",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6978,
+      "n_valid_readings": 6978,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "A91HGJY3",
+      "latitude_src": "42.845159000000002",
+      "longitude_src": "74.615772000000007",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6703,
+      "n_valid_readings": 6703,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "A96D1533",
+      "latitude_src": "42.860757",
+      "longitude_src": "74.525047999999998",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": true,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "A9S0V4H0",
+      "latitude_src": "42.878216399999999",
+      "longitude_src": "74.486469200000002",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7128,
+      "n_valid_readings": 7128,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "AB0KG76X",
+      "latitude_src": "42.884661000000001",
+      "longitude_src": "74.616474800000006",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7169,
+      "n_valid_readings": 7169,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "AC6RM3TT",
+      "latitude_src": "42.804090000000002",
+      "longitude_src": "74.5914334",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "ACKGNKTN",
+      "latitude_src": "42.827582999999997",
+      "longitude_src": "74.583360999999996",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7086,
+      "n_valid_readings": 7086,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "ACMK4VSN",
+      "latitude_src": "42.841263699999999",
+      "longitude_src": "74.595072200000004",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6580,
+      "n_valid_readings": 6580,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "ACVCHRPJ",
+      "latitude_src": "42.864792238358199",
+      "longitude_src": "74.642042385894399",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "AFHCN2S4",
+      "latitude_src": "42.860757",
+      "longitude_src": "74.525047999999998",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": true,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AFJ1ZXFD",
+      "latitude_src": "42.840507000000002",
+      "longitude_src": "74.518771000000001",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7131,
+      "n_valid_readings": 7131,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AFPZPD5Q",
+      "latitude_src": "42.860757",
+      "longitude_src": "74.525047999999998",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7186,
+      "n_valid_readings": 7186,
+      "flag_shared_coordinates": true,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AGLPXWZC",
+      "latitude_src": "42.860757",
+      "longitude_src": "74.525047999999998",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": true,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AGSSDS03",
+      "latitude_src": "42.904485999999999",
+      "longitude_src": "74.618076000000002",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6740,
+      "n_valid_readings": 6740,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "AH8SNWS4",
+      "latitude_src": "42.873193000000001",
+      "longitude_src": "74.744456999999997",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6897,
+      "n_valid_readings": 6897,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "AHC4THNC",
+      "latitude_src": "42.8735395",
+      "longitude_src": "74.542591400000006",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7193,
+      "n_valid_readings": 7193,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "AHKHCTVZ",
+      "latitude_src": "42.876283000000001",
+      "longitude_src": "74.571117999999998",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7006,
+      "n_valid_readings": 7006,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "AHNNTK7X",
+      "latitude_src": "42.880051999999999",
+      "longitude_src": "74.711079999999995",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "AJLJQGPH",
+      "latitude_src": "42.788845100000003",
+      "longitude_src": "74.577518800000007",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AJNXRVTW",
+      "latitude_src": "42.794844400000002",
+      "longitude_src": "74.513607100000002",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AKTTXQPV",
+      "latitude_src": "42.8591987348765",
+      "longitude_src": "74.7020621963038",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "AM6MX963",
+      "latitude_src": "42.875236999999998",
+      "longitude_src": "74.770397000000003",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "AM8J0GRG",
+      "latitude_src": "42.873261100000001",
+      "longitude_src": "74.4479161",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7036,
+      "n_valid_readings": 7036,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "AMLHVS5M",
+      "latitude_src": "42.831716399999998",
+      "longitude_src": "74.549282199999993",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6981,
+      "n_valid_readings": 6981,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AMQR9GFQ",
+      "latitude_src": "42.868383999999999",
+      "longitude_src": "74.691533000000007",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6853,
+      "n_valid_readings": 6853,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "AQ0DPXTC",
+      "latitude_src": "42.929380999999999",
+      "longitude_src": "74.611182999999997",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7016,
+      "n_valid_readings": 7016,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "AQ4QJR3P",
+      "latitude_src": "42.834491999999997",
+      "longitude_src": "74.497961000000004",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AQ5773WB",
+      "latitude_src": "42.853155999999998",
+      "longitude_src": "74.592344999999995",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7100,
+      "n_valid_readings": 7100,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AQGYTRCW",
+      "latitude_src": "42.838391697271099",
+      "longitude_src": "74.471239305058006",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AQHQ3RCK",
+      "latitude_src": "42.852445000000003",
+      "longitude_src": "74.506100860000004",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AQLY01N5",
+      "latitude_src": "42.885990800000002",
+      "longitude_src": "74.678218599999994",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7235,
+      "n_valid_readings": 7235,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "AQNNXW4P",
+      "latitude_src": "42.845726800000001",
+      "longitude_src": "74.637499300000002",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7125,
+      "n_valid_readings": 7125,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "AR8TFBKB",
+      "latitude_src": "42.890949499999998",
+      "longitude_src": "74.546949600000005",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6987,
+      "n_valid_readings": 6987,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "ARCFLV6V",
+      "latitude_src": "42.868124999999999",
+      "longitude_src": "74.724163000000004",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "ARTWQT94",
+      "latitude_src": "42.899326199999997",
+      "longitude_src": "74.644959600000007",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "ARV6H6Y9",
+      "latitude_src": "42.945155900000003",
+      "longitude_src": "74.627534900000001",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q1"
+    },
+    {
+      "device_id": "ASL6TVF9",
+      "latitude_src": "42.947384999999997",
+      "longitude_src": "74.586528000000001",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7109,
+      "n_valid_readings": 7109,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "AT9KPY9Y",
+      "latitude_src": "42.904186000000003",
+      "longitude_src": "74.563670500000001",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "ATCW4HPH",
+      "latitude_src": "42.881249238445498",
+      "longitude_src": "74.525093057930505",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "ATD9X7NC",
+      "latitude_src": "42.924286899999998",
+      "longitude_src": "74.570007200000006",
+      "status": "has_data_in_file",
+      "n_records_in_file": 7111,
+      "n_valid_readings": 7111,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "ATW36MMN",
+      "latitude_src": "42.892159386864797",
+      "longitude_src": "74.596637268559704",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q4"
+    },
+    {
+      "device_id": "AVY9XZBZ",
+      "latitude_src": "42.831361299999998",
+      "longitude_src": "74.616645199999994",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6929,
+      "n_valid_readings": 6929,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q2"
+    },
+    {
+      "device_id": "AVYGH7LG",
+      "latitude_src": "42.860757",
+      "longitude_src": "74.525047999999998",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": true,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AXK06SXN",
+      "latitude_src": "42.862274900000003",
+      "longitude_src": "74.4776387",
+      "status": "has_data_in_file",
+      "n_records_in_file": 6997,
+      "n_valid_readings": 6997,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "AYYG339T",
+      "latitude_src": "42.851991157752302",
+      "longitude_src": "74.568576434371295",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    },
+    {
+      "device_id": "RRF39NTD",
+      "latitude_src": "42.827626000000002",
+      "longitude_src": "74.583839999999995",
+      "status": "no_data_in_file",
+      "n_records_in_file": 0,
+      "n_valid_readings": 0,
+      "flag_shared_coordinates": false,
+      "quadrant_rule": "Q3"
+    }
+  ],
+  "dataset_summary": {
+    "records": 231316,
+    "blank_rows": 10826,
+    "valid_readings": 231316,
+    "invalid_or_excluded_records": 0,
+    "devices_with_data": 33,
+    "devices_listed": 56,
+    "first_interval_start_local": "2021-02-28 01:00:00+06:00",
+    "last_interval_start_local": "2021-12-31 23:00:00+06:00",
+    "first_interval_start_utc": "2021-02-27 19:00:00+00:00",
+    "last_interval_start_utc": "2021-12-31 17:00:00+00:00"
+  },
+  "outputs": [
+    {
+      "path": "data/interim/clarity/cleaned/clarity_audit_rows.parquet",
+      "format": "parquet",
+      "role": "full audit dataset: every worksheet row, original fields (src_*), flags",
+      "rows": 242142,
+      "size_bytes": 5239262,
+      "sha256": "f318234a85603770b033b6c845b35e2f0a093b0b92cccfbf16b415b528092db3",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/cleaned/clarity_timestamp_normalized.parquet",
+      "format": "parquet",
+      "role": "timestamp-normalised dataset (original components + interpreted timestamps)",
+      "rows": 242142,
+      "size_bytes": 1738257,
+      "sha256": "793e66f3d245c5dde20a45fc4327a5d68f5da105238f094acecf54398a321a08",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/cleaned/clarity_device_inventory.parquet",
+      "format": "parquet",
+      "role": "device inventory (all listed devices)",
+      "rows": 56,
+      "size_bytes": 19186,
+      "sha256": "266403f0aa26c9572dec6061b27b984ce11c5053e3b3cb243765011bd9337831",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/cleaned/clarity_device_coverage.parquet",
+      "format": "parquet",
+      "role": "device coverage statistics",
+      "rows": 33,
+      "size_bytes": 24779,
+      "sha256": "e1c4d9781b8674602b106ab1542383d66a4f80271b4fe798f23ed6a5768dcf2e",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/clarity/clarity_pm25_hourly.parquet",
+      "format": "parquet",
+      "role": "primary analysis table: valid readings per device and interval",
+      "rows": 231316,
+      "size_bytes": 5642020,
+      "sha256": "961d16b895981daeade9f0b187ab42bbd5a3b011ecb8122dc85e161208ef646a",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/clarity/clarity_pm25_hourly.csv",
+      "format": "csv",
+      "role": "hourly table, CSV copy (timestamp settings are in the manifest)",
+      "rows": 231316,
+      "size_bytes": 38072600,
+      "sha256": "403b00d4e504a8825e0a0edf194d8b7aa0c80bd1b718c3262cf31f07ea21b75c",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/clarity/clarity_daily.parquet",
+      "format": "parquet",
+      "role": "daily means per device (>= 18 valid hours)",
+      "rows": 10122,
+      "size_bytes": 243380,
+      "sha256": "fd0c6a734feb05855a724c9b196f29c752575ae20b966f42570fa68301e1b30f",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/clarity/clarity_monthly.parquet",
+      "format": "parquet",
+      "role": "monthly means per device (>= 75% of eligible days)",
+      "rows": 357,
+      "size_bytes": 12346,
+      "sha256": "ca6bb17f508e6dfe8d9f7f6395090ab2a2c2ab9ac17655612627de59c32f8c01",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/clarity/clarity_device_inventory.csv",
+      "format": "csv",
+      "role": "device inventory incl. no_data_in_file status",
+      "rows": 56,
+      "size_bytes": 9615,
+      "sha256": "0aa0a41c5b64187fd32d409141e9519242ac7d731d0ca2c1f8fde54eaebc9631",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_validation_report.md",
+      "format": "markdown",
+      "role": "validation report",
+      "rows": null,
+      "size_bytes": 14282,
+      "sha256": "de17256b061969a4878a92510aa30641f25f87ee5927ec39194106475aa5ffe2",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_timestamp_report.md",
+      "format": "markdown",
+      "role": "timestamp issue report",
+      "rows": null,
+      "size_bytes": 3379,
+      "sha256": "b66013fb4242fa74288b9a687a3fcc64342ab3ac22bfb7f314dda0b554a16e1c",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_device_coverage_report.md",
+      "format": "markdown",
+      "role": "device coverage report",
+      "rows": null,
+      "size_bytes": 4914,
+      "sha256": "6d52678dc1177685af16c9c2c4da2d6c22a1adfc859a7c0692d0d6beb0e8490d",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_spatial_report.md",
+      "format": "markdown",
+      "role": "spatial analysis report",
+      "rows": null,
+      "size_bytes": 5757,
+      "sha256": "7a61bae40cd8f4e926932f55898502cf6f06b301f1baff68a685220ef89553c3",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_embassy_comparison.md",
+      "format": "markdown",
+      "role": "Embassy comparison report",
+      "rows": null,
+      "size_bytes": 7333,
+      "sha256": "aa9740e79cd7c2e7e694181f6db052e7ee4257e1a1a74ffe66f37ff2373948f6",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_validation_stats.json",
+      "format": "json",
+      "role": "validation statistics",
+      "rows": null,
+      "size_bytes": 65910,
+      "sha256": "385cf76458a6433f1a478abb62df1c05f64364443f2e726577564ad8c6c82422",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_sheet_inventory.json",
+      "format": "json",
+      "role": "workbook sheet inventory",
+      "rows": null,
+      "size_bytes": 4202,
+      "sha256": "651860de17c4b3b4631885a2a5365eae5db58e4cd6cb731615fe51df819252e6",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/clarity/reports/clarity_device_coverage.csv",
+      "format": "csv",
+      "role": "device coverage table",
+      "rows": 33,
+      "size_bytes": 10378,
+      "sha256": "a6d49fda784864bfc1df6e76118348136ea050b4eb25c2c3b862f2c365c5a139",
+      "write_status": "unchanged"
+    }
+  ],
+  "known_limitations": [
+    "The hour convention and time zone are NOT documented by the source. Provisional setting: hour_ending, Asia/Bishkek, extra shift 0 h. The apparent 1-hour offset against the Embassy series is unresolved and was not applied.",
+    "Calibration: the source paper reports that the low-cost sensors had \"periodic calibrations\". We found no calibration method, schedule or per-device calibration record in the workbook or in the paper text we could read. Calibration is therefore NOT independently verified here: the readings are used as supplied, sensors are not assumed to be equally calibrated, and the single Embassy comparison below is not a calibration.",
+    "One year (28 Feb to 31 Dec 2021). There is no January or February data, so the \"winter\" in the spatial analysis means Nov–Dec only.",
+    "23 of 56 listed devices have no readings in this file. 5 of them have exactly the same coordinates as a device that has data (possibly placeholder or shared positions; cause unknown). They are kept in the inventory but not treated as active sensors.",
+    "The 10,826 blank rows below the data table were treated as non-records; an earlier exploratory summary had counted them as records with a missing hour.",
+    "This is historical 2021 coverage; nothing here describes present-day sensor coverage.",
+    "The low end looks floored or left-censored at about 4 µg/m³ (no reading below 4.01, with an abrupt start), so clean-air statistics are biased high.",
+    "The sensors are all in the built-up area; spatial statistics cannot be extrapolated to the rest of the airshed, and the representativeness estimates are descriptive for this dataset only.",
+    "The Embassy location used for the comparison is approximate (OpenStreetMap building point, not the monitor).",
+    "Redistribution terms: the Zenodo record is CC BY 4.0 (attribution required). The paper attributes the Clarity network to the Kyrgyz Hydrometeorological Agency; the record does not document the data provider's own terms, so provenance review is still required."
+  ]
+}

@@ -12,6 +12,9 @@ export default defineConfig({
     },
   },
   test: {
-    environment: 'node',
+    environment: 'jsdom',
+    setupFiles: ['./src/test/setup.ts'],
+    css: false,
+    testTimeout: 20000, // Recharts renders real SVG in these tests; the first render is slow on a cold cache
   },
 })

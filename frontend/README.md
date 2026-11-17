@@ -1,4 +1,4 @@
-# AirWatch AI frontend
+# AirWatch frontend
 
 React + TypeScript + Vite + Tailwind CSS (MapLibre GL JS and Recharts are installed for later features).
 

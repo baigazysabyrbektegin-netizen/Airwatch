@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "stage": "embassy_pm25_processing",
+  "generated_at_utc": "2026-11-10T20:34:11+00:00",
+  "processing": {
+    "script": "pipeline/process_embassy.py",
+    "version": "embassy-clean-1.0.0",
+    "python": "3.13.7",
+    "pandas": "3.1.1",
+    "pyarrow": "26.0.1",
+    "extraction_tool": "bsdtar 3.8.9 - libarchive 3.8.9 zlib/1.2.13.1-motley liblzma/5.8.3 bz2lib/1.0.8 libzstd/1.5.7 cng/2.0 libb2/bundled"
+  },
+  "source_archive": {
+    "filename": "bishkek_monitoring_us.embassy2019-2024.rar",
+    "local_path": "data/raw/zenodo_12720883/bishkek_monitoring_us.embassy2019-2024.rar",
+    "zenodo_record_id": 12720883,
+    "doi": "10.5281/zenodo.12720883",
+    "licence": {
+      "id": "cc-by-4.0"
+    },
+    "size_bytes": 393949,
+    "zenodo_checksum": {
+      "algorithm": "md5",
+      "value": "0a0514301246f3892d21e2171f765632"
+    },
+    "md5": "0a0514301246f3892d21e2171f765632",
+    "sha256": "381c66b92f1cbc631684ba2f9b90474acaf0b5afa7983bb025af0664c46df8c8",
+    "verified_against_zenodo_manifest": true,
+    "zenodo_manifest": "data/manifest/zenodo_12720883.json",
+    "provenance_review_required": true
+  },
+  "extraction": {
+    "output_dir": "data/interim/embassy/extracted",
+    "files": [
+      {
+        "filename": "Bishkek_PM2.5_2019_YTD.csv",
+        "size_bytes": 803230,
+        "md5": "2c72bef74bfa87524476b3c18a636863",
+        "sha256": "82a50a2234317e9d27cdd9853775d63803149c5841aac0392c583399ad77ec58",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2019_YTD.csv",
+        "extracted_at_utc": "2026-11-10T20:32:39+00:00",
+        "rows_read": 7751
+      },
+      {
+        "filename": "Bishkek_PM2.5_2020_YTD.csv",
+        "size_bytes": 860431,
+        "md5": "36fa2d86cfe3f6dc2caacb16a64a064c",
+        "sha256": "1c940c884544de1b2654b207129835822d53717c86bc85fa52af4c3e581335d4",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2020_YTD.csv",
+        "extracted_at_utc": "2026-11-10T20:32:39+00:00",
+        "rows_read": 8653
+      },
+      {
+        "filename": "Bishkek_PM2.5_2021_YTD.csv",
+        "size_bytes": 841250,
+        "md5": "422ace452e6b7da4eb2ac87d52e9ee43",
+        "sha256": "d3ce9e1c871cd4045e72134695e3e5874089d398ba155fc98342427c7ddc6e7a",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2021_YTD.csv",
+        "extracted_at_utc": "2026-11-10T20:32:39+00:00",
+        "rows_read": 8366
+      },
+      {
+        "filename": "Bishkek_PM2.5_2022_YTD.csv",
+        "size_bytes": 833771,
+        "md5": "10a08145862fd5b9a6270c6e05ddc968",
+        "sha256": "9479a7b3224cb28d57ef19fb828ac412098ce09d87dbd3ac6337ffbdf8053dcc",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2022_YTD.csv",
+        "extracted_at_utc": "2026-11-10T20:32:39+00:00",
+        "rows_read": 8236
+      },
+      {
+        "filename": "Bishkek_PM2.5_2023_YTD.csv",
+        "size_bytes": 856717,
+        "md5": "afe46bdb94ebf5dd257bb21d0b306a65",
+        "sha256": "d3a49fef07337f469351024b53ecb9f089f25250e4470dda32ebbcbf2459320c",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2023_YTD.csv",
+        "extracted_at_utc": "2026-11-10T20:32:39+00:00",
+        "rows_read": 8649
+      },
+      {
+        "filename": "Bishkek_PM2.5_2024_YTD.csv",
+        "size_bytes": 417677,
+        "md5": "3f8b4a62f5b8ef72e057f4424a9dac81",
+        "sha256": "24fa6c0e78ebf8e2dc870317ceb8f6154a51533c32d13ca4772ef0f35e6c1f1d",
+        "status": "already_extracted_verified",
+        "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2024_YTD.csv",
+        "extracted_at_utc": "2026-11-10T20:32:39+00:00",
+        "rows_read": 4297
+      }
+    ]
+  },
+  "cleaning_config": {
+    "high_value_ugm3": 500.0,
+    "interp_max_gap_h": 3,
+    "local_window_h": 2,
+    "local_min_neighbours": 3,
+    "drop_ratio": 0.1,
+    "drop_min_median": 50.0,
+    "spike_ratio": 5.0,
+    "spike_min_delta": 100.0,
+    "expected_unit": "UG/M3"
+  },
+  "cleaning_rules": [
+    "Source CSV fields are read as text and kept unchanged under src_* columns; no source file is modified.",
+    "PM2.5 = `Raw Conc.` (µg/m³). `NowCast Conc.` is kept only as nowcast_ugm3 for reference and is never used as the measurement.",
+    "`Date (LT)` is parsed with the strict format %Y-%m-%d %I:%M %p; the original string is kept in ts_original. Local time is localised to Asia/Bishkek (UTC+6, no daylight saving) and also stored as UTC. The source does not say whether the stamp is the start or end of the hour; it is used as given and never shifted.",
+    "`QC Name` is kept as qc_name_original and standardised to VALID / INVALID / MISSING / SUSPECT (else UNKNOWN).",
+    "-999 (and non-numeric values) become NaN, never 0 (flag_sentinel_999, flag_missing_value).",
+    "Negative values are kept in pm25_raw_ugm3 and flagged flag_neg_noise; pm25_model_ugm3 is clipped at 0.",
+    "pm25_model_ugm3 is filled only for hours whose primary row has QC VALID, a real value, the expected unit and a parsed timestamp; INVALID, SUSPECT and MISSING rows stay in the audit dataset with their flags but have no model value.",
+    "Duplicate timestamps: if exactly one VALID row, it is the primary; identical VALID rows keep the first; VALID rows with different values are a conflict: all are flagged DUP_CONFLICT and excluded from the primary series (no guessing).",
+    "High readings are flagged (flag_high_value at the configured threshold; flag_local_drop / flag_local_spike relative to the surrounding valid hours) and never deleted.",
+    "The hourly table spans first to last timestamp with a row for every hour; hours without a source row are NO_ROW. Measurements are never shifted.",
+    "Gap runs, irregular 23/25-row days and duplicates are reported, not repaired.",
+    "Interpolation (linear, gaps of at most 3 h with a valid value on both sides) exists only in pm25_feature_interp_ugm3, flagged is_imputed; targets (pm25_model_ugm3) are never interpolated."
+  ],
+  "outputs": [
+    {
+      "path": "data/interim/embassy/cleaned/embassy_pm25_cleaned_rows.parquet",
+      "format": "parquet",
+      "role": "auditable row-level dataset (all source rows, original fields, flags)",
+      "rows": 45952,
+      "size_bytes": 2242840,
+      "sha256": "89d8eadf531784792d976cf62ab62d969f61581eb7db397ee62fd15f97609295"
+    },
+    {
+      "path": "data/processed/embassy/embassy_pm25_hourly.parquet",
+      "format": "parquet",
+      "role": "primary analytical hourly table",
+      "rows": 47322,
+      "size_bytes": 1458452,
+      "sha256": "74bd2e417213f35381213ea8e6f05f349853dd9647d790c5ed1931588015cb65"
+    },
+    {
+      "path": "data/processed/embassy/embassy_pm25_hourly.csv",
+      "format": "csv",
+      "role": "hourly table, CSV copy",
+      "rows": 47322,
+      "size_bytes": 9331978,
+      "sha256": "e83a5360e626417ba85d36baf2a698637bc4f3083e7fbd2d4c68b8a86a0b69cb"
+    },
+    {
+      "path": "data/interim/embassy/reports/embassy_validation_report.md",
+      "format": "markdown",
+      "role": "validation report",
+      "rows": null,
+      "size_bytes": 13776,
+      "sha256": "e14af24fefbf49a759f81572d7b7c432545901088528e2137a3eb7f9370e5458"
+    },
+    {
+      "path": "data/interim/embassy/reports/embassy_validation_stats.json",
+      "format": "json",
+      "role": "validation statistics",
+      "rows": null,
+      "size_bytes": 26849,
+      "sha256": "aff44fffc9356f9b8156075dfac8d93fe56bd877468bc417134e8798bd7fd7e7"
+    },
+    {
+      "path": "data/interim/embassy/reports/embassy_gaps.csv",
+      "format": "csv",
+      "role": "runs of hours without a valid value",
+      "rows": null,
+      "size_bytes": 17615,
+      "sha256": "2d8afb7b5abef29686a06e46e3615329be1402ac7b989f888bbd98845c14191b"
+    },
+    {
+      "path": "data/interim/embassy/reports/embassy_missing_timestamp_runs.csv",
+      "format": "csv",
+      "role": "runs of hours without any source row",
+      "rows": null,
+      "size_bytes": 4837,
+      "sha256": "2d1bc534e6a673c22ea3523a630c39626fa6665396fcd4d1cbbae0f4e29c4026"
+    },
+    {
+      "path": "data/interim/embassy/reports/embassy_irregular_days.csv",
+      "format": "csv",
+      "role": "local dates with a row count other than 24",
+      "rows": null,
+      "size_bytes": 7505,
+      "sha256": "4456efaf6f0c59016428c060417b91ad9aa9208b854dbecc7dd4951b2494fd6b"
+    },
+    {
+      "path": "data/interim/embassy/reports/embassy_duplicates.csv",
+      "format": "csv",
+      "role": "rows sharing a timestamp",
+      "rows": null,
+      "size_bytes": 594,
+      "sha256": "d6637952506249a8d9b0b5140e19c32d1b169e3c74096a12f18f9015d5d4c0dd"
+    }
+  ],
+  "dataset": {
+    "timezone": "Asia/Bishkek",
+    "first_timestamp_local": "2019-02-06 06:00:00+06:00",
+    "last_timestamp_local": "2024-06-30 23:00:00+06:00",
+    "source_rows": 45952,
+    "hours_in_timeline": 47322,
+    "valid_hours": 45613,
+    "missing_timestamps": 1373,
+    "duplicate_conflict_hours": 3,
+    "quality_flag_counts_hourly": {
+      "VALID": 45613,
+      "NO_ROW": 1373,
+      "INVALID": 167,
+      "MISSING_VALUE": 160,
+      "SUSPECT": 6,
+      "DUP_CONFLICT": 3
+    }
+  },
+  "known_limitations": [
+    "Single monitoring site; hourly values only. No coordinates are in the files (the Embassy location is approximate elsewhere in the project).",
+    "The timestamp convention (hour start or end) is not stated in the source; the 1-hour offset seen against the 2021 Clarity data (Stage 3) is not resolved here.",
+    "Conflicting duplicate timestamps are excluded rather than resolved; the cause is not documented in the source (US daylight-saving dates in the data: row counts {'2019-03-10': 24, '2019-11-03': 24, '2020-03-08': 24, '2020-11-01': 24, '2021-03-14': 24, '2021-11-07': 24, '2022-03-13': 24, '2022-11-06': 24, '2023-03-12': 24, '2023-11-05': 24, '2024-03-10': 24}).",
+    "QC `Valid` is the provider's flag and the measurement behaviour is not homogeneous over time. Minimum valid raw value by year: {2019: 5.0, 2020: -4.0, 2021: -5.0, 2022: -4.0, 2023: -4.0, 2024: -4.0} (2019 never goes below 5 µg/m³; later years contain near-zero and negative readings). Months where at least 30 % of valid readings are below 5 µg/m³: ['2020-04..2020-09', '2022-05..2022-07', '2023-04..2024-06']. Low shares are partly natural in clean-air summers, so compare winter with winter: Nov–Mar months before 2023-11 range 0.0–15.6 %, while 2023-11 to 2024-03 range 37.9–61.9 %. In some hours near-zero values alternate with ~150 µg/m³ values (e.g. 2024-02-29 22:00). These rows are flagged where detectable (flag_local_drop) but NOT removed or reclassified. The cause is unverified (possible instrument or reporting change); the periods need review before use in modelling or forecast evaluation.",
+    "Local drop/spike flags only catch isolated values relative to neighbouring hours; they cannot detect an entire low-reading period.",
+    "The archive holds yearly 'YTD' files; the 2020 and 2021 files carry an older modification date (Jul 2022) than the others (Jul 2024), so later quality-control revisions, if any, may not be reflected in every year.",
+    "Gaps are reported but not imputed in the target; feature interpolation is limited to short gaps.",
+    "Redistribution terms: the Zenodo record is CC BY 4.0, but the original provider's terms for the Embassy data are not documented in the record."
+  ]
+}

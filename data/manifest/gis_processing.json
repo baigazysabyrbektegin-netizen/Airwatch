@@ -1,0 +1,2215 @@
+{
+  "schema_version": 1,
+  "stage": "gis_processing",
+  "generated_at_utc": "2026-11-10T22:06:40+00:00",
+  "processing": {
+    "script": "pipeline/process_gis.py",
+    "version": "gis-1.0.0",
+    "python": "3.13.7",
+    "geopandas": "1.2.0",
+    "shapely": "2.2.0",
+    "pyogrio": "0.13.0",
+    "pyproj": "3.8.0",
+    "pandas": "3.1.1",
+    "pyarrow": "26.0.1",
+    "extraction_tool": "bsdtar 3.8.9 - libarchive 3.8.9 zlib/1.2.13.1-motley liblzma/5.8.3 bz2lib/1.0.8 libzstd/1.5.7 cng/2.0 libb2/bundled"
+  },
+  "source": {
+    "zenodo_record_id": 12720883,
+    "doi": "10.5281/zenodo.12720883",
+    "zenodo_manifest": "data/manifest/zenodo_12720883.json",
+    "archives": [
+      {
+        "filename": "gis_bishkek-grids-pop.rar",
+        "size_bytes": 1925775,
+        "zenodo_checksum": {
+          "algorithm": "md5",
+          "value": "3b8444cc201551a946da46753fb9660b"
+        },
+        "md5": "3b8444cc201551a946da46753fb9660b",
+        "sha256": "72579813adc89cabfc73d06e35b4cd3a0e7d6260535051a452e32908e4bad27f",
+        "verified_against_zenodo_manifest": true,
+        "provenance_review_required": true
+      },
+      {
+        "filename": "gis_bishkek_roads.rar",
+        "size_bytes": 1540900,
+        "zenodo_checksum": {
+          "algorithm": "md5",
+          "value": "c329dd2cce22e26be1b8c245799f4829"
+        },
+        "md5": "c329dd2cce22e26be1b8c245799f4829",
+        "sha256": "d38918fc0276de6a4f52dbb1291c622220f1d70e0d6cd86b6179532d913fbca1",
+        "verified_against_zenodo_manifest": true,
+        "provenance_review_required": true
+      },
+      {
+        "filename": "gis_bishkek_adm0.rar",
+        "size_bytes": 9994,
+        "zenodo_checksum": {
+          "algorithm": "md5",
+          "value": "29c2e8ba7f2798e7dd48ecf2eda0438c"
+        },
+        "md5": "29c2e8ba7f2798e7dd48ecf2eda0438c",
+        "sha256": "33d11397fed0082406a9ae15cb74fab1e9bbcab19c562c0027122646164dd750",
+        "verified_against_zenodo_manifest": true,
+        "provenance_review_required": true
+      },
+      {
+        "filename": "gis_bishkek_multiplelayers.rar",
+        "size_bytes": 34640,
+        "zenodo_checksum": {
+          "algorithm": "md5",
+          "value": "a37aeb2eff995173c21a963eb93014ff"
+        },
+        "md5": "a37aeb2eff995173c21a963eb93014ff",
+        "sha256": "df5f755f6c1b3eccaf00db93fd35300da0d3cfa747de66c28ae04dcd49341593",
+        "verified_against_zenodo_manifest": true,
+        "provenance_review_required": true
+      },
+      {
+        "filename": "bishkek_gridded_emissions_2018.rar",
+        "size_bytes": 2557075,
+        "zenodo_checksum": {
+          "algorithm": "md5",
+          "value": "17934e9b431675ea1f6dadc33f4bbddc"
+        },
+        "md5": "17934e9b431675ea1f6dadc33f4bbddc",
+        "sha256": "1c95db08856779b25b1caff06b6938fab4acd76d29038dbe0ab1be2714756e8c",
+        "verified_against_zenodo_manifest": true,
+        "provenance_review_required": true
+      },
+      {
+        "filename": "bishkek_camx_pm25_monthlyavg.csv",
+        "size_bytes": 151804,
+        "zenodo_checksum": {
+          "algorithm": "md5",
+          "value": "f18ef07f746041245c28dd47a5d5e6b8"
+        },
+        "md5": "f18ef07f746041245c28dd47a5d5e6b8",
+        "sha256": "e76a9e6bfd1d2fd65b70ee20e17eadebd4794719a6629c07c7be33f073b4fc53",
+        "verified_against_zenodo_manifest": true,
+        "provenance_review_required": true
+      }
+    ]
+  },
+  "extraction": [
+    {
+      "archive": "gis_bishkek-grids-pop.rar",
+      "output_dir": "data/interim/gis/extracted/gis_bishkek-grids-pop",
+      "files": [
+        {
+          "filename": "grids_bishkek.shx",
+          "size_bytes": 16100,
+          "md5": "7de6548342fd554240cd682502d8ddbd",
+          "sha256": "1a4add56343a24b3fbc48383649df51dc91db9d1664754af2a75818f29c49967",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/grids_bishkek.shx",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek.dbf",
+          "size_bytes": 1230354,
+          "md5": "2ed228d59936be0e35b596506afa5e46",
+          "sha256": "9237808ceab4cbf98fbb96125d08f52a1fe149f42c7b59a43110e9f834171394",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/grids_bishkek.dbf",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek.kml",
+          "size_bytes": 1668863,
+          "md5": "000d0d67a165f22f2fe618e75991268b",
+          "sha256": "92f41f9df2682bcae433d7249d949821eead1b4e78652f6b6d4dc84bc20b908f",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/grids_bishkek.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek.shp",
+          "size_bytes": 272100,
+          "md5": "3e2e64ca4957ae876f24f9f4bbef4846",
+          "sha256": "7c874428f3a97f99de4c7d1a7cf9597eb274baacdcb29491282e229c1964419f",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/grids_bishkek.shp",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_pop_allyears.csv",
+          "size_bytes": 269634,
+          "md5": "0010f8cb2d6ac451a4893317631f93a2",
+          "sha256": "c317ca81e2e266dd7726f8e5db9dcd250a3f23d0a0162cf4c7aef12bbe39ed39",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_pop_allyears.csv",
+          "role": "table",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek.csv",
+          "size_bytes": 109135,
+          "md5": "8a3e2b9a00f496b734ad7deabdc9908e",
+          "sha256": "8920f729d9b715efc6155cf600b2f341f64a48a50de8b529d36846039338bc36",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/grids_bishkek.csv",
+          "role": "table",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2000.png",
+          "size_bytes": 76240,
+          "md5": "c613ca430af2705dfe14da8101004a76",
+          "sha256": "bbbd0a4f5a4d9c381de1fbaf0cd762d1223c1b612010cdcbeefd1b4bbaa90db3",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2000.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2001.png",
+          "size_bytes": 76422,
+          "md5": "16bd173b1f3273f595e7efc158c45540",
+          "sha256": "cdb7e1b985189bff1d67c3149dd58dd3f47b43d4c37a648484dadcfb0247416c",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2001.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2002.png",
+          "size_bytes": 76322,
+          "md5": "e22cea625004ac578f2b3828c5a848b5",
+          "sha256": "bc59c83b47614d00c3fa17d6f7970e6c849465dfe0b29db6bb8283e01d0d6583",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2002.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2003.png",
+          "size_bytes": 76608,
+          "md5": "5d754da8a3207ee03cb28e45ba79a172",
+          "sha256": "9a08d8f5fa12b5c2aa801242c0426763ea66104940217006f8bfe7b0cb27cdc8",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2003.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2004.png",
+          "size_bytes": 75820,
+          "md5": "5beb2e690498d24202e8a48d43eaa9ea",
+          "sha256": "a7018dd9bacc77148544ba3fe40ca0edc358bb159234ab79e955ad81a50f775f",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2004.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2005.png",
+          "size_bytes": 75914,
+          "md5": "6f9036200fdba3d988b703c0e7082dee",
+          "sha256": "d3ec1468c9829a551e74c41df0b943ac62505d638e1306cfa52b6898b72ce7a4",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2005.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2006.png",
+          "size_bytes": 75924,
+          "md5": "7f2745cd80cc5c3c70c63b6729cbfc1e",
+          "sha256": "38a0e3216d8fd9e48ed3d4ac678d3e2785cd135f200d855716511f13bd457e80",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2006.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2007.png",
+          "size_bytes": 75459,
+          "md5": "f289fef38f09f34822a40a7b16647fbe",
+          "sha256": "12d2fcfb4cd38a32de7c6d5a100b89b8b13490fb5a4e07d1bc48a019160756bb",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2007.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2008.png",
+          "size_bytes": 75605,
+          "md5": "94ba1410fc710b020cd0c4bd47d6cd89",
+          "sha256": "de52e407e325c16deae9077e5ce88c49bdfa84e20ecbb8c5f272a66de24deb87",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2008.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2009.png",
+          "size_bytes": 75663,
+          "md5": "e150aa7fcf9584d4eadf7dab1e1c3b85",
+          "sha256": "1b47e3e39d9daaedf9d10a9d3b10fd89521b02326afeab232b5022077a568614",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2009.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2010.png",
+          "size_bytes": 75107,
+          "md5": "6afd8c5b2dec71fca8a58c0041c88c34",
+          "sha256": "55d5f6750d0411b177ca9ba4048907873ea9a1f9a6f627abca4a9ae3aa3d3169",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2010.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2011.png",
+          "size_bytes": 75055,
+          "md5": "4be00e9b46552fb9653613f482cdde2f",
+          "sha256": "d468eb20e34de2df7e723d78534705f501dda3b47752b75a81236c74ea5dd7be",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2011.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2012.png",
+          "size_bytes": 76389,
+          "md5": "9416561f74241435e41aec4253650f8e",
+          "sha256": "6568dab25906639fda195e16e83bf4a38223eb732372e3960dc9d72e64c449e7",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2012.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2013.png",
+          "size_bytes": 75709,
+          "md5": "1e30a69dac49567590d9834d927bafdb",
+          "sha256": "1b92da9cf55e9ce6386d95c3ef2f0a0400c86f925d3c5cd0a555ab39f7cbfc30",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2013.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2014.png",
+          "size_bytes": 75828,
+          "md5": "5c8141da5e067bba64d10fa6406212de",
+          "sha256": "19adf1253a600e61283ad89047f4d25424769d976d6136d7b9a5f1b59fc980f5",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2014.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2015.png",
+          "size_bytes": 75909,
+          "md5": "03a8e404eeb5600d5845e116f1eca7da",
+          "sha256": "108ef9158720e0e6a89c43405b71dab24af57c7dd244d2825ba598780b84a40c",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2015.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2016.png",
+          "size_bytes": 75094,
+          "md5": "789f73a0e70bfb00f206c678ad2a5a8d",
+          "sha256": "71630b6dfaa0e7f30de584e3d7da9a4c1f31759476d90374aba472718e2532a9",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2016.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2017.png",
+          "size_bytes": 75003,
+          "md5": "45aeafbaa46b4a47b475b1e30139d333",
+          "sha256": "02284b5b6fa1279c65f7dbf5cfe9dfa49c6bd77fc313fe5133536bbd097a04ec",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2017.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2018.png",
+          "size_bytes": 75541,
+          "md5": "2ecb78236a4810e893c1620b590c19d2",
+          "sha256": "4bc7b9d30cd389c1bfaef9f87789dafd2b89601ef816ae3deab7cac6567cc5fa",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2018.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_2019.png",
+          "size_bytes": 75114,
+          "md5": "0e72a291f7207d1d1afe5c30f45d34a3",
+          "sha256": "31f1271229e7d486aa99dd37b9eab74b36017053aadabc65415d91679313db94",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_2019.png",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_popgrid_anime.gif",
+          "size_bytes": 290044,
+          "md5": "c25bf5dd3b4f319674e451799762fa3e",
+          "sha256": "4290e5557e69dba074c82fd712d9c23b6930c53a35aed9d87d89d9b0ea556b90",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek-grids-pop/bishkek_popgrid_anime.gif",
+          "role": "figure (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        }
+      ]
+    },
+    {
+      "archive": "gis_bishkek_roads.rar",
+      "output_dir": "data/interim/gis/extracted/gis_bishkek_roads",
+      "files": [
+        {
+          "filename": "roads_density_byclass_bishkek.csv",
+          "size_bytes": 139219,
+          "md5": "fad1a861567820386c223b6c3c6fa75c",
+          "sha256": "c0465c59b465d86959dc025533f0fa4f133bc9715368de08b4030ab37d2be1a2",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/roads_density_byclass_bishkek.csv",
+          "role": "table",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_primary.cpg",
+          "size_bytes": 10,
+          "md5": "0e4bb4efc30ec129e5003a18ea2103cf",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_primary.cpg",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_primary.dbf",
+          "size_bytes": 744820,
+          "md5": "360a327a955e458b6e28051e3bf4113a",
+          "sha256": "db0e577ab58b45bb2b5f650484b6b1b9235e45260ccd3b76cba61773e51549c9",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_primary.dbf",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_primary.shp",
+          "size_bytes": 144300,
+          "md5": "508c652eb645b3e878eee027a40944c0",
+          "sha256": "0e96f98bf5985c53b2bd4309b4780e8f79bd67c69507e0ef0d1a0b8b5bf11c29",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_primary.shp",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_primary.shx",
+          "size_bytes": 8180,
+          "md5": "19deb712526be1d7529d445818a16be3",
+          "sha256": "5310027d6c34677563e60ad191df79b23ff17219a5d3833f6ad99a438e3ac516",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_primary.shx",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_roads.cpg",
+          "size_bytes": 10,
+          "md5": "0e4bb4efc30ec129e5003a18ea2103cf",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_roads.cpg",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_roads.dbf",
+          "size_bytes": 3291477,
+          "md5": "b9b037e871cf456545282cbfebe2f0b6",
+          "sha256": "0091e0032d9d1cd7709eec72212e5e629bb382d6cd83a663a8174eb5867be5c1",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_roads.dbf",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_roads.shp",
+          "size_bytes": 2977704,
+          "md5": "b0c1d4c0cd2e7419e365814f87adf175",
+          "sha256": "695d0d1999ba050cd85220f028460b16465e843c0be80fd0558d5574aa820706",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_roads.shp",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_roads.shx",
+          "size_bytes": 145564,
+          "md5": "723699edc7c4497fa9e02313399c3e9e",
+          "sha256": "2e0786b2fc77011012e06cb84784da581c542427cb60766d6121fee8f524c368",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_roads.shx",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_secondary.cpg",
+          "size_bytes": 10,
+          "md5": "0e4bb4efc30ec129e5003a18ea2103cf",
+          "sha256": "09fc313075748ce8ead962229ed89c919d5a9ff71974ee725a0b48bb87d975a2",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_secondary.cpg",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_secondary.dbf",
+          "size_bytes": 502347,
+          "md5": "8d800c03faf4d2f4ade5f81a67d2372f",
+          "sha256": "8d3588c88ba2328b0e8f0f20545343ede780768fcebf319519d16a26b8b37fa6",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_secondary.dbf",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_secondary.shp",
+          "size_bytes": 107504,
+          "md5": "11b044c2a07b5e84c55a42cc16d5a90c",
+          "sha256": "c7e0f78bd94deece1e48915f96b518a3a9b45ee44fe6f4b3564570ad36a6e264",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_secondary.shp",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "grids_bishkek_secondary.shx",
+          "size_bytes": 5548,
+          "md5": "46d17b169483a09a5d284350a6f5d86f",
+          "sha256": "47bec63adb92320f9be0ac13d1a13aeac2c4df9cf7c980da613558e428b64a20",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_roads/grids_bishkek_secondary.shx",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        }
+      ]
+    },
+    {
+      "archive": "gis_bishkek_adm0.rar",
+      "output_dir": "data/interim/gis/extracted/gis_bishkek_adm0",
+      "files": [
+        {
+          "filename": "bishkek_adm2.shx",
+          "size_bytes": 132,
+          "md5": "3d04890aa43ab5842ac19998013f214f",
+          "sha256": "6de611995a3252ea9fe4f312d2230d127afaebb542d0f74e843bf61dde74bf14",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_adm0/bishkek_adm2.shx",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_adm2.bna",
+          "size_bytes": 12431,
+          "md5": "ad7c22115b6c914d24585613737ada80",
+          "sha256": "4cb76cf5f9db8fe452136327613d988ed48fccd9e55c571540d431b11531d6e3",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_adm0/bishkek_adm2.bna",
+          "role": "bna boundary (duplicate of the shapefile)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_adm2.dbf",
+          "size_bytes": 4902,
+          "md5": "fe6463c52ef8109c3a123c60dba74347",
+          "sha256": "db0eff6e63168e943330ff1292245c7010e4f4c7607c50f1383d0eebcc79d021",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_adm0/bishkek_adm2.dbf",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_adm2.prj",
+          "size_bytes": 145,
+          "md5": "c742bee3d4edfc2948a2ad08de1790a5",
+          "sha256": "a02a27b1d1982c8516d83398e85a3c8b1aef1713c13ef4d84d7bde17430c07c4",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_adm0/bishkek_adm2.prj",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_adm2.shp",
+          "size_bytes": 8248,
+          "md5": "4f3a4a9d8ff0c9b6102d8f6545e42e9e",
+          "sha256": "5573f9c95acb3e5d3340e8e2187f9b9f05072864ddb5721c7a9740697f1555df",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_adm0/bishkek_adm2.shp",
+          "role": "shapefile component",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        }
+      ]
+    },
+    {
+      "archive": "gis_bishkek_multiplelayers.rar",
+      "output_dir": "data/interim/gis/extracted/gis_bishkek_multiplelayers",
+      "files": [
+        {
+          "filename": "water_bodies.kml",
+          "size_bytes": 14966,
+          "md5": "06e9902f3f1b9d2dd7be9e09bdf6a53e",
+          "sha256": "404dd1556be44b904771406431bc2e5edb6751f6e8c595c4373e5eeb0e94aa92",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/water_bodies.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "brick_kilns.kml",
+          "size_bytes": 10168,
+          "md5": "f1b6236c348c4a4aa5ede7df9f92179d",
+          "sha256": "3053f7b3a7d8a491767b8658a45c8d0e0535ffecff39096738831a452ed3cb96",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/brick_kilns.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bte_boilers.kml",
+          "size_bytes": 17169,
+          "md5": "7e9d06b45d5ffb368111d01759e2d083",
+          "sha256": "76bedd7ce9aab7dff1680f9f94851c0c1d0df80f041ef6f3118f0ddbc82bda37",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/bte_boilers.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "dh_districts.kml",
+          "size_bytes": 2613,
+          "md5": "9699650a0800362e1dce0b01fea388b9",
+          "sha256": "01ac250c5a4ee33d3fbc86cc2734896e32ea358e671b8b07cb632062795dc564",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/dh_districts.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "indus_area1.kml",
+          "size_bytes": 39470,
+          "md5": "ab2e76334250d599e89388f15efab4c7",
+          "sha256": "4b65f7ab0d09ecf2ba848a679054fc96aea95d37d722a8eb1b7aae95a6463ded",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/indus_area1.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "indus_area2.kml",
+          "size_bytes": 2588,
+          "md5": "7546b097e7558e5554afd1da1ebd4c0d",
+          "sha256": "0b68954a7a308424c364f64aeec87a4e5a0b2ae7436312c3c7fd48a60019ba5e",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/indus_area2.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "landfills.kml",
+          "size_bytes": 1651,
+          "md5": "271a4c76011de39a348458b510331d2c",
+          "sha256": "ccb35fe4841dbd9ab261bdbd2a3320976cba57db94b7c0a41edecb76edc885ca",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/landfills.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "main_province.kml",
+          "size_bytes": 2579,
+          "md5": "d5244cb197ce02f2addf207f00a7805a",
+          "sha256": "c720976b30442c10b156b9c8b54e99355081f275a7514ee68326b8546b03ce56",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/main_province.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "main_roads.kml",
+          "size_bytes": 17007,
+          "md5": "6b4bd335f682cf422a2c33f9e85c057a",
+          "sha256": "c3bab10c3188d4ccfe9309dd0511b4947881ef716a08f6c1b27c8dd2176f6d48",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/main_roads.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "quarries.kml",
+          "size_bytes": 15021,
+          "md5": "1083e78bdd835fd9e3b8e32622f548d5",
+          "sha256": "bdc0db0348485a0cc877b30a64c26f90006e939e10f8cdcca6dcb8572bafbfb6",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/gis_bishkek_multiplelayers/quarries.kml",
+          "role": "kml layer",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        }
+      ]
+    },
+    {
+      "archive": "bishkek_gridded_emissions_2018.rar",
+      "output_dir": "data/interim/gis/extracted/bishkek_gridded_emissions_2018",
+      "files": [
+        {
+          "filename": "camxpoint_monthly_profile.csv",
+          "size_bytes": 1272,
+          "md5": "52df46eef451c46690160225777bdeaa",
+          "sha256": "190cb0829f0615d57c84a2331b48838a5fa313c9f288281a2f2c7f4dcfc207b5",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/camxpoint_monthly_profile.csv",
+          "role": "CAMx temporal profile (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_airport_lto.emi",
+          "size_bytes": 73984,
+          "md5": "0187333b482d2cfb70a6093c56e93627",
+          "sha256": "2880bb9f55be5cad05251246a4c34108298edaa422ef5283872264dc6bb98f39",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_airport_lto.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_coal.emi",
+          "size_bytes": 74344,
+          "md5": "9ff1de6ca021819361859537c5020c54",
+          "sha256": "d9d9421f660d37594c019977a9fb8c454e2e5d300941d09374133c51a13be988",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_coal.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_coal.ptemi",
+          "size_bytes": 1527,
+          "md5": "6c6e0f194a0b2eb5822be6c03603fca6",
+          "sha256": "925df6866fe3e81cdaff0301ca2b4f3a9888b86a34d151d118ca2ba8a66e1384",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_coal.ptemi",
+          "role": "point-source emissions",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_oil.emi",
+          "size_bytes": 74622,
+          "md5": "f66861f8b36a4b18ca38bc8d9696e4f7",
+          "sha256": "46de90edd756bf4e86d4f9ece55a37fc8b163a63289efc21660d432f8ee44c4c",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_oil.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_oil.ptemi",
+          "size_bytes": 1805,
+          "md5": "653586869d1e60b374bdbba5324609fd",
+          "sha256": "50993549bc58e45c598d0c978103859aeeff0e8c2a35855aa0914b4049fb20d7",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_oil.ptemi",
+          "role": "point-source emissions",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_others.emi",
+          "size_bytes": 74482,
+          "md5": "d9797e51cf0c311df0984d0cf4a0f42e",
+          "sha256": "e6a8fd4a4971f1dcb5dca8c27ba41ea7be6c05f838740d4264a32dac7d148206",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_others.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_others.ptemi",
+          "size_bytes": 1665,
+          "md5": "c72198226d08402a2418b3f62334ab24",
+          "sha256": "9d9f73ae883cd1369c430ac967845d8c5e4b381ddd58ce3c86d4849cccc25ca2",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_others.ptemi",
+          "role": "point-source emissions",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_wood.emi",
+          "size_bytes": 74526,
+          "md5": "ec982d317fd24b366bfbf464518cce72",
+          "sha256": "248b4da9d50ea6ffbc2fbf1e2dbfa214b881cd77c0f303a5d253581378539680",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_wood.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_brick_wood.ptemi",
+          "size_bytes": 1709,
+          "md5": "2790c553b70857ba139bf90adc7bbf23",
+          "sha256": "d2c338a756ba0082f7a7d22f07e4585d2e099bb10109ed8098ea666d0267b747",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_brick_wood.ptemi",
+          "role": "point-source emissions",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_const_dust.emi",
+          "size_bytes": 100149,
+          "md5": "01bc4d2a2d7436731b655ddaabac1117",
+          "sha256": "acb834d82d9ae23697af6ecb1f785beda8688a0fa9d2c8f354ec04fdf5981140",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_const_dust.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_biogas.emi",
+          "size_bytes": 225299,
+          "md5": "4c81ff71e5f3353a688500bb52ce8bee",
+          "sha256": "8090fe8365be73b686336b631069e669020a43c639ebf1988d63f1b2595e8999",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_biogas.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_coal.emi",
+          "size_bytes": 236022,
+          "md5": "ad78c15038d4792e2a1b49089e8f3565",
+          "sha256": "96fa7c4c0d704f4e28533260b20e3819cc52dea0b23fd01b8c68005cd1a3195e",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_coal.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_cowdung.emi",
+          "size_bytes": 273869,
+          "md5": "22696779e8859d0358484554e4df3de3",
+          "sha256": "bf91830803ddf35d1885940884429d77af50bd166b6251c9f4362c3dc586e438",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_cowdung.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_cropresi.emi",
+          "size_bytes": 276307,
+          "md5": "8b8b024b2707e8a8d50eb00835965975",
+          "sha256": "cefa342a763f5acfad5eae10defb93b45014f380f1cab081131a0376a7a93167",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_cropresi.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_kero.emi",
+          "size_bytes": 283823,
+          "md5": "8f0b85e68802554db71ab3dcdfd826d2",
+          "sha256": "75ac73b3e258c022a99bea137f10338cce3200a9eed64084af96c71c01820ffc",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_kero.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_lpg.emi",
+          "size_bytes": 290029,
+          "md5": "b09f7c9d1a6f0a8b09131bf3e7ffcc2a",
+          "sha256": "ccd41cca1d0fe0e7cbab0f70fa8c3507c66dc492823097c41f05f2923ecf9fd8",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_lpg.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_others.emi",
+          "size_bytes": 362307,
+          "md5": "02e18f450ead3c7a63443ddb6f4d8b40",
+          "sha256": "7641085fb58e9ff945b5a5448dcaddfd30a48e9c95580d94306c0077b7a3cc67",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_others.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_cook_wood.emi",
+          "size_bytes": 282267,
+          "md5": "c9870cfbc8b7aeb443bf982f35845134",
+          "sha256": "89d70e5477c3514c554d836eda2e926b82a187071f99b77f94a2745ddac90a11",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_cook_wood.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_dgsets_dgsets.emi",
+          "size_bytes": 327987,
+          "md5": "65b8479d96977e09befeb3f67a71373d",
+          "sha256": "6c789190fc28e80821730e9702aaa05db640dd57445d47eca309ee758b7b3221",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_dgsets_dgsets.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_evap_diesel.emi",
+          "size_bytes": 73246,
+          "md5": "1702651ea44a128dc7a997c71d12d219",
+          "sha256": "e6a2c0340aee8572d8908691f221b43bca7a381f4e48e40a9a7ffa2ce6ce209a",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_evap_diesel.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_evap_gas.emi",
+          "size_bytes": 73246,
+          "md5": "1702651ea44a128dc7a997c71d12d219",
+          "sha256": "e6a2c0340aee8572d8908691f221b43bca7a381f4e48e40a9a7ffa2ce6ce209a",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_evap_gas.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_evap_petrol.emi",
+          "size_bytes": 73246,
+          "md5": "1702651ea44a128dc7a997c71d12d219",
+          "sha256": "e6a2c0340aee8572d8908691f221b43bca7a381f4e48e40a9a7ffa2ce6ce209a",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_evap_petrol.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_heat_coal.emi",
+          "size_bytes": 233420,
+          "md5": "a12bba8120db4bf03a14c4e9e3309499",
+          "sha256": "50b69323e7f1dc2158e8d361576df9c3c7d635345ccdab074c9e15443ecca755",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_heat_coal.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_heat_oil.emi",
+          "size_bytes": 360157,
+          "md5": "ca9d385befc23e8e36c9f12152fbb0ff",
+          "sha256": "4e6b4b2ed3de5bd069b91c64d380212411289ccaaab1be28daa8e3f07077557d",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_heat_oil.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_heat_wood.emi",
+          "size_bytes": 282636,
+          "md5": "1d6a86d85ef613176d984063f9d7d865",
+          "sha256": "cc31d708185123f71c4240681b88dc68272281abcfd319182c84ebeb1cb42b2e",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_heat_wood.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_indheavy_indheavy.emi",
+          "size_bytes": 75775,
+          "md5": "0fb3953e39b0c09f37e12631551a6297",
+          "sha256": "c6976fbcae8b1d9626659300cbe5549cab3ae5440979a1af5c6fd19dbe2b9ca8",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_indheavy_indheavy.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_indheavy_indheavy.ptemi",
+          "size_bytes": 5058,
+          "md5": "e3a0717608badfcf85c30c0a1db25818",
+          "sha256": "739e266432b4f141feee900eca4d1a406e2843a282ce0954a48d066ba8f358e1",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_indheavy_indheavy.ptemi",
+          "role": "point-source emissions",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_indlight_coal.emi",
+          "size_bytes": 166928,
+          "md5": "076c91fce64506b01c10623421d3d6f4",
+          "sha256": "03041bc45ec719d265dfd527cc76f3b6fff7ca02126f92b8b859664f2accb05a",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_indlight_coal.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_indlight_gas.emi",
+          "size_bytes": 143563,
+          "md5": "4f31fa86ca8374aa89b75988416f2904",
+          "sha256": "f31950338e68b114a2926730e357c74f13df18613e5f073f0f977ee729947794",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_indlight_gas.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_indlight_oil.emi",
+          "size_bytes": 166944,
+          "md5": "af26da63ef1f050100d36bd3430778ad",
+          "sha256": "88a4d5ba8fc5808928be07fa30d7d5e4fde36c2674b69c69a429353a2d0f16c5",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_indlight_oil.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_indlight_wood.emi",
+          "size_bytes": 166897,
+          "md5": "4b38663024ebf565280df4b44b12166a",
+          "sha256": "ec84b78a52ddb11f25d8d8963611028205017bb663dd72be0b0fc07fcf4730a1",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_indlight_wood.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_light_kero.emi",
+          "size_bytes": 315455,
+          "md5": "cfa8ef14977a35485eb1aae539a7087c",
+          "sha256": "5030dc7f25f619272c015fa56d7639bf4958979d8db8d59d4735c082d56b5c4b",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_light_kero.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_quarry_diesel.emi",
+          "size_bytes": 77799,
+          "md5": "42e2b0459e3be0bde1d1d9b92a84c07e",
+          "sha256": "fa6acdac267189ee0ac7ecf943a5c7d69836aa6766dfe4ddd7fde829f442a6ba",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_quarry_diesel.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_quarry_dust.emi",
+          "size_bytes": 74439,
+          "md5": "8b307a98f789e3f41327bec2d0ab217d",
+          "sha256": "845615831a27f99a0e7d6b26b4421ef3658bea8c89a62dda03bda7b75c276d26",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_quarry_dust.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_2ws.emi",
+          "size_bytes": 124145,
+          "md5": "20752f3d1810a1deaa40949428ec57ef",
+          "sha256": "f98593691eb913bee9bfd27408911e7a4a99da67ca4862e3e389f1845cf8bc50",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_2ws.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_3ws.emi",
+          "size_bytes": 124222,
+          "md5": "096d410b9144cac7fbbb97faded04d01",
+          "sha256": "a7521c377b1e295f01ac520dc5d2b6c1ced7e823eb783d98a1afdf4282f3cf3a",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_3ws.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_bus1.emi",
+          "size_bytes": 123775,
+          "md5": "9bf2d1b8ce1bb3506d25d7c66ef9022d",
+          "sha256": "fe1524989fb7e0ecc2460a767d96bc6190bbd938ea852ddc0712ba75ffdb6b73",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_bus1.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_bus2.emi",
+          "size_bytes": 123769,
+          "md5": "537d01fdefc82e8c0df69db0e28baf0d",
+          "sha256": "5d12e07274025b5401d7ee45d4fb8c125779711900f34a1ec3e360b0e0e73143",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_bus2.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_cars.emi",
+          "size_bytes": 116405,
+          "md5": "c1df9f13c237c7bb45e81c7b54e6dd9d",
+          "sha256": "6a03ffb3965805f9a0fb4a23fbd64d3e78468e2f37342331289e40e2ee617df7",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_cars.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_hdv.emi",
+          "size_bytes": 119190,
+          "md5": "28e11aa1c52659768ac28265bd54ebab",
+          "sha256": "3312774d2911c48493cc1c15854b779797d9426c3ea10be22f813b3435351075",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_hdv.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_ldv.emi",
+          "size_bytes": 119928,
+          "md5": "1ac2315a9f14de17734b30f6f7b4b50c",
+          "sha256": "f68a46dc92cd34ed90c71d1e67cfc44df3f2dbb4f9c04194a8e61b83ad7ec4ee",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_ldv.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_muvs.emi",
+          "size_bytes": 119849,
+          "md5": "ea8a7354371b2fb7bf7aac366e32793d",
+          "sha256": "fde88d0ade16fa648021b673ec2eb9e4ef6abb583a4353e3969d006563725ca7",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_muvs.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_offrd.emi",
+          "size_bytes": 124166,
+          "md5": "d9f56e525ee0e17aaf0da2569ba3786e",
+          "sha256": "c207e984ee614b6f7fdd79c3fc25ed9f7b6f9fad5f286b1fb234b1016f438681",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_offrd.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_others.emi",
+          "size_bytes": 124212,
+          "md5": "d50cbd421b247d19604dda195d173e42",
+          "sha256": "6ed26c528da1d307981146bcab3aea7bad82000344e2dd1ac5259c9b1764e2f5",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_others.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_rdust_taxis.emi",
+          "size_bytes": 123548,
+          "md5": "911084b81b5f89e6f6d6b9870a12d483",
+          "sha256": "25e5fcd09fe8d515355a7f45fd7f3938a971224da47a2341c16aa27709eb3222",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_rdust_taxis.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_2ws.emi",
+          "size_bytes": 181193,
+          "md5": "81d7788f0ae784c95359a3501ab1de5e",
+          "sha256": "6a553eaf09305e6ad43875500bca9660e61b785c89dabd98fd784fe85dfc2b7f",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_2ws.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_3ws.emi",
+          "size_bytes": 184085,
+          "md5": "e914f1e18a64082c5be79843077c4429",
+          "sha256": "bb7d7e09c5c0d9d6ebbf3fa2e99f805359f9fd14e56bfd3ca5dec2b6a72fef06",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_3ws.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_bus1.emi",
+          "size_bytes": 180838,
+          "md5": "f9c76a6f9e191a56ec3025db64b948de",
+          "sha256": "f2f8100b8b272d2f88de72043b953373787406bbbdc8a6f45b721c4901dd119e",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_bus1.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_bus2.emi",
+          "size_bytes": 272956,
+          "md5": "9edbf5f8fbf4cb02cb0e356d33856c66",
+          "sha256": "b987d4adf8687f301f53367af791f6d95926c080e04b43a77c3b01e35e177780",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_bus2.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_cars.emi",
+          "size_bytes": 171544,
+          "md5": "4ad93c0b83a41dfba58f79c112a6e4d9",
+          "sha256": "48f3674529724f0eac113b7f7c16b6497c195a6c005d9506fd4bd5222e964296",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_cars.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_hdv.emi",
+          "size_bytes": 261717,
+          "md5": "58966d6bb3a53520956d957947566125",
+          "sha256": "c2e75bb76d8c775e3870ebe074e2a7d771beebc29022c220ce89759f5053d8fc",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_hdv.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_ldv.emi",
+          "size_bytes": 269040,
+          "md5": "d9d53538e21406c395cb8a5780ae3399",
+          "sha256": "5be72ca7f15ef3a4e5289cc0bd5273ea2627126add2c3816eea5c0dcc25f900d",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_ldv.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_muvs.emi",
+          "size_bytes": 175319,
+          "md5": "24a050f285a0bcbba1e3c4e17c02afb8",
+          "sha256": "159a8534d4238df02680668c776a03da3768aed2c671a1142d550f11d88ae543",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_muvs.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_offrd.emi",
+          "size_bytes": 276388,
+          "md5": "9dc86ca0908be5a4773b1406a45beb42",
+          "sha256": "29768de74c8a17f1679d98c061fe60c62c5ded649d8000a62bab68ff835449d9",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_offrd.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_others.emi",
+          "size_bytes": 277007,
+          "md5": "dd28f58c424f3f42c3ba8d2404e906bd",
+          "sha256": "48f973835350df5fbf92110258f8a09b219dd4afe35fbc3d10456663101c5afd",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_others.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_vehexh_taxis.emi",
+          "size_bytes": 180729,
+          "md5": "e457260d2c18f6acf2faa8dd34767950",
+          "sha256": "abbbacf55b56c8c27c7a63632a82a44de99c917e4cafc21b511a45a53b0d32cc",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_vehexh_taxis.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "bishkek_2018_waste_waste.emi",
+          "size_bytes": 260713,
+          "md5": "6f5e36fde7b833520ca80fe70fd42525",
+          "sha256": "21cd294ded65d09c1bba43c9878f63520947421cd6a08082fda300c2d43473c9",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/bishkek_2018_waste_waste.emi",
+          "role": "area emissions grid",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "camxarea_hourly_profile.csv",
+          "size_bytes": 7960,
+          "md5": "64c262b9617afb16614d681e61cdf5b9",
+          "sha256": "fd280dce974341e084f2696719b4887cbb2417a771269cc8da5480647582d99c",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/camxarea_hourly_profile.csv",
+          "role": "CAMx temporal profile (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "camxarea_monthly_profile.csv",
+          "size_bytes": 5053,
+          "md5": "d44aa91e1d2682d605f61f5f4f958c78",
+          "sha256": "2ce6d67d06e2c139fe3ada79567953643c1421353bb00c0802e33b491b2b6de6",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/camxarea_monthly_profile.csv",
+          "role": "CAMx temporal profile (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        },
+        {
+          "filename": "camxpoint_hourly_profile.csv",
+          "size_bytes": 1000,
+          "md5": "77e8fc04ca6ba8b653cd14406bf5b089",
+          "sha256": "e31c4fe9f36f03487d3b6dce71eaf170a8ff51a79b90f66154b92e247a7d1525",
+          "status": "already_extracted_verified",
+          "local_path": "data/interim/gis/extracted/bishkek_gridded_emissions_2018/camxpoint_hourly_profile.csv",
+          "role": "CAMx temporal profile (not processed)",
+          "extracted_at_utc": "2026-11-10T22:06:17+00:00"
+        }
+      ]
+    }
+  ],
+  "crs": {
+    "grids_bishkek.shp": {
+      "dataset": "grids_bishkek.shp",
+      "declared_crs": null,
+      "declared_epsg": null,
+      "status": "assumed_wgs84_undeclared",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [
+        "polygon coordinates equal the cell-corner attributes in degrees (74.35-74.85 E, 42.70-43.10 N)",
+        "the same grid in grids_bishkek.kml (KML is always WGS84) has identical cell centroids"
+      ],
+      "note": "CRS is NOT declared in the source; WGS84 is an assumption supported by the evidence listed."
+    },
+    "grids_bishkek_roads.shp (and primary/secondary)": {
+      "dataset": "grids_bishkek_roads.shp",
+      "declared_crs": null,
+      "declared_epsg": null,
+      "status": "assumed_wgs84_undeclared",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [
+        "grids_bishkek_primary.shp: 1,010 of 1,010 segments lie inside the grid cell named by their Maille attribute when read as WGS84 degrees",
+        "grids_bishkek_secondary.shp: 681 of 681 segments lie inside the grid cell named by their Maille attribute when read as WGS84 degrees",
+        "coordinates are plausible longitude/latitude values inside the study area"
+      ],
+      "note": "CRS is NOT declared in the source; WGS84 is an assumption supported by the evidence listed."
+    },
+    "bishkek_adm2.shp": {
+      "dataset": "bishkek_adm2.shp",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "brick_kilns.kml": {
+      "dataset": "brick_kilns.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "bte_boilers.kml": {
+      "dataset": "bte_boilers.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "dh_districts.kml": {
+      "dataset": "dh_districts.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "indus_area1.kml": {
+      "dataset": "indus_area1.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "indus_area2.kml": {
+      "dataset": "indus_area2.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "landfills.kml": {
+      "dataset": "landfills.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "main_province.kml": {
+      "dataset": "main_province.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "main_roads.kml": {
+      "dataset": "main_roads.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "quarries.kml": {
+      "dataset": "quarries.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    },
+    "water_bodies.kml": {
+      "dataset": "water_bodies.kml",
+      "declared_crs": "EPSG:4326",
+      "declared_epsg": 4326,
+      "status": "declared_wgs84",
+      "coordinates_look_geographic": true,
+      "overlaps_study_area": true,
+      "evidence": [],
+      "note": ""
+    }
+  },
+  "output_crs": "EPSG:4326",
+  "metric_crs_for_lengths_and_areas": "EPSG:32643",
+  "spatial_resolution": {
+    "grid_cells": "50 x 40",
+    "cell_size_deg": 0.01,
+    "cell_size_km_approx": [
+      0.8154667549301101,
+      1.1057
+    ],
+    "extent_deg": [
+      74.35,
+      42.7,
+      74.85,
+      43.1
+    ]
+  },
+  "data_vintage": {
+    "population": "2000-2019",
+    "emissions": "2018",
+    "camx": "year not stated (figures named 2018)",
+    "roads": "OSM extract date not stated",
+    "context_layers": "not stated"
+  },
+  "data_kinds": {
+    "population": "gridded estimate",
+    "roads": "static geographic",
+    "camx": "MODELLED",
+    "emissions": "MODELLED inventory",
+    "context_layers": "static geographic (mapped)"
+  },
+  "integration_methodology": [
+    "Reference grid: the Zenodo 50 x 40 grid of 0.01 degree cells (cell_id = (iy-1)*50 + ix). Population, CAMx and the emissions tables are already on this grid; they are joined on the cell indices (ix, iy), never resampled.",
+    "Population: the latest annual column (2019) is placed in the integrated grid; all 20 years stay in population_grid.parquet. Nothing is interpolated or projected to other years.",
+    "Roads: OSM classes are grouped (primary incl. trunk and links; secondary; tertiary; local streets = residential, living_street, service; unclassified; non-motorised ways). Lines are clipped to cell polygons in UTM 43N and summed; density = length (km) / cell area (km2). The source CSV counts km per cell, and its 'tertiary' is broader than OSM tertiary, so its values are kept separately as src_csv_*.",
+    "CAMx: monthly values are copied as given; the annual mean is the unweighted mean of the 12 monthly means. Nothing is smoothed or interpolated.",
+    "Emissions: PM2.5 = FRPM + PEC + POA per sector file, summed by sector group and in total (tons per cell per year). The .emi files already include the point sources, so the point table is a subset and is never added.",
+    "Context layers: point layers are counted per cell; polygon layers become area fractions of each cell (union per layer, UTM 43N). Layers with unverified meaning are labelled so.",
+    "Administrative polygons: converted to a share of each cell lying inside the Kyrgyzstan polygons (frac_in_kgz_polygons).",
+    "CAMx and the emissions inventory are related (the inventory is a model input); they are shown side by side but must not be read as independent evidence of each other.",
+    "No weighting, scoring, normalisation or ranking is applied here; that belongs to the Monitoring Gap Planner stage."
+  ],
+  "grid_columns": [
+    {
+      "column": "cell_id",
+      "definition": "grid cell id = (iy-1)*50 + ix",
+      "unit": "",
+      "data_kind": "key",
+      "source": "Zenodo grid",
+      "vintage": ""
+    },
+    {
+      "column": "ix",
+      "definition": "column index 1-50 (west to east)",
+      "unit": "",
+      "data_kind": "key",
+      "source": "Zenodo grid",
+      "vintage": ""
+    },
+    {
+      "column": "iy",
+      "definition": "row index 1-40 (south to north)",
+      "unit": "",
+      "data_kind": "key",
+      "source": "Zenodo grid",
+      "vintage": ""
+    },
+    {
+      "column": "lon_c",
+      "definition": "cell centre",
+      "unit": "degrees (WGS84)",
+      "data_kind": "key",
+      "source": "Zenodo grid",
+      "vintage": ""
+    },
+    {
+      "column": "lat_c",
+      "definition": "cell centre",
+      "unit": "degrees (WGS84)",
+      "data_kind": "key",
+      "source": "Zenodo grid",
+      "vintage": ""
+    },
+    {
+      "column": "area_km2",
+      "definition": "cell area computed in UTM 43N (EPSG:32643); the source area_cell attribute differs by < 0.002 km2",
+      "unit": "km2",
+      "data_kind": "static geometry",
+      "source": "Zenodo grid",
+      "vintage": ""
+    },
+    {
+      "column": "geometry",
+      "definition": "cell polygon",
+      "unit": "WGS84",
+      "data_kind": "static geometry",
+      "source": "Zenodo grid",
+      "vintage": ""
+    },
+    {
+      "column": "pop_2019",
+      "definition": "population 2019: gridded population estimate, persons per cell (unit assumed; none stated)",
+      "unit": "persons/cell",
+      "data_kind": "gridded population ESTIMATE (not a census count)",
+      "source": "Zenodo bishkek_pop_allyears.csv (deck names LandScan; unverified)",
+      "vintage": "2019"
+    },
+    {
+      "column": "road_length_km_primary",
+      "definition": "length of primary roads inside the cell (OSM classes grouped; see report)",
+      "unit": "km/cell",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_density_km_per_km2_primary",
+      "definition": "road length / cell area, primary",
+      "unit": "km/km2",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic volume",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_length_km_secondary",
+      "definition": "length of secondary roads inside the cell (OSM classes grouped; see report)",
+      "unit": "km/cell",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_density_km_per_km2_secondary",
+      "definition": "road length / cell area, secondary",
+      "unit": "km/km2",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic volume",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_length_km_tertiary",
+      "definition": "length of tertiary roads inside the cell (OSM classes grouped; see report)",
+      "unit": "km/cell",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_density_km_per_km2_tertiary",
+      "definition": "road length / cell area, tertiary",
+      "unit": "km/km2",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic volume",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_length_km_local_streets",
+      "definition": "length of local_streets roads inside the cell (OSM classes grouped; see report)",
+      "unit": "km/cell",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_density_km_per_km2_local_streets",
+      "definition": "road length / cell area, local_streets",
+      "unit": "km/km2",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic volume",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_length_km_unclassified",
+      "definition": "length of unclassified roads inside the cell (OSM classes grouped; see report)",
+      "unit": "km/cell",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_density_km_per_km2_unclassified",
+      "definition": "road length / cell area, unclassified",
+      "unit": "km/km2",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic volume",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_length_km_non_motorised_ways",
+      "definition": "length of non_motorised_ways roads inside the cell (OSM classes grouped; see report)",
+      "unit": "km/cell",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_density_km_per_km2_non_motorised_ways",
+      "definition": "road length / cell area, non_motorised_ways",
+      "unit": "km/km2",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic volume",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_length_km_total",
+      "definition": "length of total roads inside the cell (OSM classes grouped; see report)",
+      "unit": "km/cell",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "road_density_km_per_km2_total",
+      "definition": "road length / cell area, total",
+      "unit": "km/km2",
+      "data_kind": "static geographic (OpenStreetMap-derived); NOT traffic volume",
+      "source": "Zenodo roads shapefile",
+      "vintage": "OSM extract date not stated"
+    },
+    {
+      "column": "camx_pm25_jan",
+      "definition": "modelled monthly mean PM2.5, JAN",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_feb",
+      "definition": "modelled monthly mean PM2.5, FEB",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_mar",
+      "definition": "modelled monthly mean PM2.5, MAR",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_apr",
+      "definition": "modelled monthly mean PM2.5, APR",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_may",
+      "definition": "modelled monthly mean PM2.5, MAY",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_jun",
+      "definition": "modelled monthly mean PM2.5, JUN",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_jul",
+      "definition": "modelled monthly mean PM2.5, JUL",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_aug",
+      "definition": "modelled monthly mean PM2.5, AUG",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_sep",
+      "definition": "modelled monthly mean PM2.5, SEP",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_oct",
+      "definition": "modelled monthly mean PM2.5, OCT",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_nov",
+      "definition": "modelled monthly mean PM2.5, NOV",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_dec",
+      "definition": "modelled monthly mean PM2.5, DEC",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "camx_pm25_annual_mean",
+      "definition": "annual mean = unweighted mean of the 12 monthly means",
+      "unit": "ug/m3",
+      "data_kind": "MODELLED (WRF-CAMx); not a measurement",
+      "source": "Zenodo bishkek_camx_pm25_monthlyavg.csv",
+      "vintage": "year not stated in the file (figures named 2018)",
+      "note": "Driven by the same 2018 emissions inventory as emis_*: not independent evidence of it."
+    },
+    {
+      "column": "emis_pm25_airport_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_airport_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_brick_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_brick_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_const_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_const_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_cook_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_cook_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_dgsets_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_dgsets_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_evap_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_evap_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_heat_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_heat_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_indheavy_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_indheavy_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_indlight_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_indlight_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_light_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_light_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_quarry_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_quarry_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_rdust_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_rdust_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_vehexh_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_vehexh_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_waste_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_waste_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_total_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_total_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm25_total_t_per_km2_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm25_total_t_per_km2_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/km2/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_pm10_total_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_pm10_total_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_no_total_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_no_total_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_no2_total_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_no2_total_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_co_total_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_co_total_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "emis_so2_total_t_yr",
+      "definition": "2018 bottom-up emissions inventory, emis_so2_total_t_yr; PM2.5 = FRPM + PEC + POA",
+      "unit": "t/cell/yr",
+      "data_kind": "MODELLED inventory (not measured)",
+      "source": "Zenodo bishkek_gridded_emissions_2018.rar",
+      "vintage": "2018",
+      "note": "The .emi files already include the point sources; do not add emis_point_sources_*."
+    },
+    {
+      "column": "n_point_sources",
+      "definition": "point sources (brick kilns, heavy industry) located in the cell; their PM2.5 is a SUBSET of the cell's emis_pm25_total_t_yr",
+      "unit": "count / t/yr",
+      "data_kind": "MODELLED inventory",
+      "source": "Zenodo .ptemi files",
+      "vintage": "2018",
+      "note": "Do not add to emis_pm25_total_t_yr (double counting)."
+    },
+    {
+      "column": "emis_point_sources_pm25_t_yr",
+      "definition": "point sources (brick kilns, heavy industry) located in the cell; their PM2.5 is a SUBSET of the cell's emis_pm25_total_t_yr",
+      "unit": "count / t/yr",
+      "data_kind": "MODELLED inventory",
+      "source": "Zenodo .ptemi files",
+      "vintage": "2018",
+      "note": "Do not add to emis_pm25_total_t_yr (double counting)."
+    },
+    {
+      "column": "n_bte_boilers",
+      "definition": "number of mapped points of this layer inside the cell",
+      "unit": "count",
+      "data_kind": "static geographic (mapped features)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated"
+    },
+    {
+      "column": "n_brick_kilns",
+      "definition": "number of mapped points of this layer inside the cell",
+      "unit": "count",
+      "data_kind": "static geographic (mapped features)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated"
+    },
+    {
+      "column": "frac_industrial_areas",
+      "definition": "share of the cell covered by industrial_areas",
+      "unit": "fraction",
+      "data_kind": "static geographic (mapped polygons)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated",
+      "note": ""
+    },
+    {
+      "column": "frac_quarries",
+      "definition": "share of the cell covered by quarries",
+      "unit": "fraction",
+      "data_kind": "static geographic (mapped polygons)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated",
+      "note": ""
+    },
+    {
+      "column": "frac_water_bodies",
+      "definition": "share of the cell covered by water_bodies",
+      "unit": "fraction",
+      "data_kind": "static geographic (mapped polygons)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated",
+      "note": ""
+    },
+    {
+      "column": "frac_landfill",
+      "definition": "share of the cell covered by landfill",
+      "unit": "fraction",
+      "data_kind": "static geographic (mapped polygons)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated",
+      "note": ""
+    },
+    {
+      "column": "frac_dh_districts_unverified",
+      "definition": "share of the cell covered by dh_districts_unverified",
+      "unit": "fraction",
+      "data_kind": "static geographic (mapped polygons)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated",
+      "note": "Meaning of this layer is unverified."
+    },
+    {
+      "column": "frac_main_province_unverified",
+      "definition": "share of the cell covered by main_province_unverified",
+      "unit": "fraction",
+      "data_kind": "static geographic (mapped polygons)",
+      "source": "Zenodo KML layer",
+      "vintage": "not stated",
+      "note": "Meaning of this layer is unverified."
+    },
+    {
+      "column": "frac_in_kgz_polygons",
+      "definition": "share of the cell inside the Kyrgyzstan polygons (cells at the northern edge may partly lie outside)",
+      "unit": "fraction",
+      "data_kind": "static geographic",
+      "source": "Zenodo bishkek_adm2.shp",
+      "vintage": "not stated"
+    }
+  ],
+  "validation_summary": {
+    "grid_checks_passed": true,
+    "population_years": [
+      2000,
+      2001,
+      2002,
+      2003,
+      2004,
+      2005,
+      2006,
+      2007,
+      2008,
+      2009,
+      2010,
+      2011,
+      2012,
+      2013,
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019
+    ],
+    "roads": 18183,
+    "emissions_pm25_total_t_yr": 5488.62972587563,
+    "point_sources_reconcile": true,
+    "camx_annual_domain_mean": 24.10712125
+  },
+  "outputs": [
+    {
+      "path": "data/processed/gis/population_grid.parquet",
+      "format": "parquet",
+      "role": "population per cell, annual 2000-2019 (persons/cell, estimate)",
+      "rows": 2000,
+      "size_bytes": 211510,
+      "sha256": "74ded152665fcc5a444dbf251e79544a1f31aed4d839fbdb3ff9ba5f2b5d3e46",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/roads.parquet",
+      "format": "geoparquet",
+      "role": "all roads with OSM classes and our group",
+      "rows": 18183,
+      "size_bytes": 2011929,
+      "sha256": "4e1da561ed44a3a14f2ba4b93790a6016e5e42003083f03d04bc4174c9984170",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/road_density_grid.parquet",
+      "format": "parquet",
+      "role": "road length and density per cell (not traffic)",
+      "rows": 2000,
+      "size_bytes": 181089,
+      "sha256": "1dc5a21990b88f5727daefd9ec7335fcd98d0b9a8ba126d491365e65f2780c7f",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/administrative_boundaries.geojson",
+      "format": "geojson",
+      "role": "Kyrgyzstan polygons clipped to the airshed (country level)",
+      "rows": 4,
+      "size_bytes": 13960,
+      "sha256": "8ba60d66cc29d6c7b5ece36125d1c1e6f404cbf0ca0b5a01fe463a0126550512",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/context_layers.geojson",
+      "format": "geojson",
+      "role": "KML context layers (boilers, kilns, industrial areas, landfill, quarries, water, main roads, 2 unverified polygons)",
+      "rows": 148,
+      "size_bytes": 102595,
+      "sha256": "d1951a6e688daa357067f87b2fbb721cca6e05dfd0fcf469749039654013c176",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/camx_pm25_grid.parquet",
+      "format": "parquet",
+      "role": "MODELLED monthly and annual PM2.5 (ug/m3)",
+      "rows": 2000,
+      "size_bytes": 126672,
+      "sha256": "8e5d88fb67936e9c853609027063919229d58e272e62ad74e7fc08a9cf96745a",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/emissions_area_grid.parquet",
+      "format": "parquet",
+      "role": "2018 inventory per cell: PM2.5 by sector file and group, PM10, NO, NO2, CO, SO2 (t/cell/yr); includes point-source sectors",
+      "rows": 2000,
+      "size_bytes": 782381,
+      "sha256": "5f4c91b3b0722c253f950afde9e7519fe0dc90d8e8f5ebfe1cbfdaa00b916b41",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/emissions_point_sources.parquet",
+      "format": "geoparquet",
+      "role": "point sources (subset of the area totals; do not add)",
+      "rows": 71,
+      "size_bytes": 28701,
+      "sha256": "734126bcd97da394814c42e7fad3dd120ed0242d4e638170e6bed1dbce02a602",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/processed/gis/airwatch_spatial_grid.parquet",
+      "format": "geoparquet",
+      "role": "integrated grid: one row per cell",
+      "rows": 2000,
+      "size_bytes": 624541,
+      "sha256": "eefdd6f2b5ddbd0d30b1a74e337d3d4a9580cc87a36bafe583a2da79615fb347",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/gis/validated/emissions_sector_summary.csv",
+      "format": "csv",
+      "role": "per-file emissions totals by pollutant (t/yr)",
+      "rows": 52,
+      "size_bytes": 11679,
+      "sha256": "1acdc3300e9249bcd745f3fe62b8b3c3673a4a6caaff9a971ca4bd1dc422f2c5",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/gis/validated/gis_validation_checks.json",
+      "format": "json",
+      "role": "all validation checks (machine-readable)",
+      "rows": null,
+      "size_bytes": 85105,
+      "sha256": "ad35d3efb3dee3d83daa739e7706c593f7825f053db4cf97becccf97e60ac5a5",
+      "write_status": "unchanged"
+    },
+    {
+      "path": "data/interim/gis/reports/gis_validation_report.md",
+      "format": "markdown",
+      "role": "consolidated validation report",
+      "rows": null,
+      "size_bytes": 19666,
+      "sha256": "eb7e12b7f507328cf16ee439e753555b1605a3b32fc05edda24f509ab3690d60",
+      "write_status": "unchanged"
+    }
+  ],
+  "licence": {
+    "record_level_licence": {
+      "id": "cc-by-4.0"
+    },
+    "attribution_required": true,
+    "notes": [
+      "Zenodo record 12720883 (10.5281/zenodo.12720883) is licensed {'id': 'cc-by-4.0'} at record level; attribution is required: Guttikunda, S. (2024). A Multi-Pollutant Emissions Inventory for Air Pollution Modeling and Supporting Information for Bishkek. Zenodo. doi:10.5281/zenodo.12720883.",
+      "The record states no file-level licences; all five archives and the CAMx table are marked provenance_review_required in the Stage 1 manifest.",
+      "Roads come from OpenStreetMap (ODbL, attribution and share-alike for derived databases). Distributing roads.parquet or the road-density grid is subject to ODbL; whether the record's CC BY 4.0 satisfies this is NOT established: review before redistribution.",
+      "Population: the slide deck names LandScan (Oak Ridge National Laboratory) as the source; its terms are not documented in the record and were not checked.",
+      "The KML context layers appear to be hand-mapped (the deck mentions Google Earth scans); the terms of any underlying imagery are unknown.",
+      "CAMx output and the emissions inventory are the record author's own products (CC BY 4.0), but their inputs (activity data, population, OSM roads) carry their own terms.",
+      "The administrative polygon's origin is not stated."
+    ]
+  },
+  "known_limitations": [
+    "Vintages differ and are not harmonised: population 2000-2019 (latest 2019), emissions 2018, CAMx year not stated in the file (figures named 2018), OSM roads and the KML layers have no stated date.",
+    "The CRS is not declared for the grid, population and road shapefiles (no .prj). WGS84 is assumed on the evidence listed in section 3; a different datum would shift features slightly but not by cell-scale amounts.",
+    "Population, CAMx and emissions are modelled/estimated products on a ~0.9 km2 grid. They are not measurements and are not more accurate for being integrated on one grid.",
+    "Road density is road length per area. It says nothing about traffic volume, vehicle type or emissions.",
+    "The source road density CSV is in km per cell and its 'tertiary' class is broader than OSM tertiary; do not compare the two without reading section 10.",
+    "Road names and references in the shapefiles consist of question marks: the Cyrillic text was already lost in the source DBF files. They are kept as given and are not usable.",
+    "The administrative file is the Kyrgyzstan country polygon clipped to the airshed box (it is named adm2 but is labelled KGZ / Kyrgyzstan throughout). There is no Bishkek city or district boundary in the archive.",
+    "KML context layers have almost no attributes (only boilers are named). The meaning of dh_districts and main_province is unverified; brick_kilns and bte_boilers are identified only by file name, the paper and the deck.",
+    "The emissions .emi files contain the point sources; the three 'unspecified' point-source columns are all zero; the four stack parameters (heavy industry only) are undocumented and kept unlabelled.",
+    "Sector names are inferred from file names; the Zenodo record does not define them. The 'heat' sector may not include the central heating plant (probably inside heavy industry); this was not verified.",
+    "Cells at the northern edge may lie partly outside Kyrgyzstan (see frac_in_kgz_polygons); the datasets do not say how such cells were treated."
+  ]
+}

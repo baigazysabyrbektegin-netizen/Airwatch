@@ -8,4 +8,3 @@ geopandas
 pyarrow
 httpx
 pytest
-# ML (scikit-learn, xgboost) is added later, when the forecasting module starts.
