@@ -19,6 +19,62 @@ docs/       Decisions and design notes
 notebooks/  Exploratory work
 ```
 
+## Clone and run from a fresh checkout
+
+Requirements:
+
+- Git
+- Python 3.13
+- Node.js and npm
+- Windows `tar` (included in current Windows versions; used to extract the source RAR archive)
+- Internet access for the initial dataset and weather downloads
+
+Clone the repository and create the backend environment:
+
+```powershell
+git clone https://github.com/baigazysabyrbektegin-netizen/Airwatch.git
+cd Airwatch
+py -3.13 -m venv backend\.venv
+backend\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
+cd frontend
+npm ci
+cd ..
+```
+
+The Git repository intentionally does not contain the large raw and processed datasets. Build them once,
+from the repository root, in this order:
+
+```powershell
+$env:PYTHONPATH = "."
+backend\.venv\Scripts\python.exe -m pipeline.ingest_zenodo
+backend\.venv\Scripts\python.exe -m pipeline.process_embassy
+backend\.venv\Scripts\python.exe -m pipeline.process_clarity
+backend\.venv\Scripts\python.exe -m pipeline.process_gis
+backend\.venv\Scripts\python.exe -m pipeline.process_weather
+```
+
+The ingestion and processing steps can take time and require several gigabytes of free disk space.
+They are safe to rerun; verified downloads and unchanged outputs are reused. The weather step requires
+internet access. If you only need to verify that the application starts, you can skip these steps, but
+data pages will report that their datasets are unavailable.
+
+Open two PowerShell windows. In the first, start the backend from the repository root:
+
+```powershell
+$env:PYTHONPATH = "."
+backend\.venv\Scripts\python.exe -m uvicorn app.main:app --app-dir backend --reload --port 8000
+```
+
+In the second, start the frontend:
+
+```powershell
+cd frontend
+npm run dev
+```
+
+Open the URL printed by Vite and check the backend at
+<http://127.0.0.1:8000/api/health>.
+
 ## Run the backend
 From the repository root (Windows PowerShell), so the root-level `pipeline/` package is importable:
 ```powershell
