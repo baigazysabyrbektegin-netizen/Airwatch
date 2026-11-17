@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "stage": "clarity_pm25_processing",
-  "generated_at_utc": "2026-11-10T21:32:21+00:00",
+  "generated_at_utc": "2026-11-17T18:31:43+00:00",
   "processing": {
     "script": "pipeline/process_clarity.py",
     "version": "clarity-clean-1.0.0",
-    "python": "3.13.7",
+    "python": "3.13.14",
     "pandas": "3.1.1",
     "pyarrow": "26.0.1",
     "xlsx_reader": "pipeline/xlsx_reader.py (stdlib zipfile + XML; no extra dependency)"
@@ -284,7 +284,7 @@
         "rows": 242142,
         "size_bytes": 9032896,
         "sha256": "cf61e50fc697a4212e48c0f9d4cc0c62c6a2490ef8222f42974b5c7ea72b6b9f",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/clarity/extracted/sheet_2021.csv",
         "extracted_at_utc": "2026-11-10T21:30:34+00:00"
       },
@@ -294,7 +294,7 @@
         "rows": 7,
         "size_bytes": 1299,
         "sha256": "9c56a9777e8e90692ddfc8fb193c0309903369f73769e733824281d7721cf226",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/clarity/extracted/sheet_pivot.csv",
         "extracted_at_utc": "2026-11-10T21:30:34+00:00"
       },
@@ -304,7 +304,7 @@
         "rows": 42,
         "size_bytes": 8327,
         "sha256": "9cadab2be591bfe19432ddbe9dc1fb414eb5597ddf953b4df9b20420b11ffc7d",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/clarity/extracted/sheet_monthly.csv",
         "extracted_at_utc": "2026-11-10T21:30:34+00:00"
       },
@@ -314,7 +314,7 @@
         "rows": 40,
         "size_bytes": 17092,
         "sha256": "d63f07af03696790977f35120df938516cfd0904c3aab8c632d1e4365786a957",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/clarity/extracted/sheet_hourly1.csv",
         "extracted_at_utc": "2026-11-10T21:30:34+00:00"
       },
@@ -324,7 +324,7 @@
         "rows": 19,
         "size_bytes": 6355,
         "sha256": "561a2ce976c262c2bf161527a2437f7dbb9cc57a1ae551241073fcddec3da610",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/clarity/extracted/sheet_hourly2.csv",
         "extracted_at_utc": "2026-11-10T21:30:34+00:00"
       },
@@ -334,7 +334,7 @@
         "rows": 57,
         "size_bytes": 4289,
         "sha256": "1f0e7efd79005a5821794f1b789cc5f206c8419ad00fa1f6e81868edb2fadc39",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/clarity/extracted/sheet_locations.csv",
         "extracted_at_utc": "2026-11-10T21:30:34+00:00"
       },
@@ -344,7 +344,7 @@
         "rows": 7,
         "size_bytes": 1100,
         "sha256": "171dc567e5168d65399ae9f8aa9fd33aa70c21664bcaf2fadaa2e2c1675a581c",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/clarity/extracted/sheet_quadrant_monthly.csv",
         "extracted_at_utc": "2026-11-10T21:30:34+00:00"
       }
@@ -996,7 +996,7 @@
       "rows": 242142,
       "size_bytes": 5239262,
       "sha256": "f318234a85603770b033b6c845b35e2f0a093b0b92cccfbf16b415b528092db3",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/cleaned/clarity_timestamp_normalized.parquet",
@@ -1005,7 +1005,7 @@
       "rows": 242142,
       "size_bytes": 1738257,
       "sha256": "793e66f3d245c5dde20a45fc4327a5d68f5da105238f094acecf54398a321a08",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/cleaned/clarity_device_inventory.parquet",
@@ -1014,7 +1014,7 @@
       "rows": 56,
       "size_bytes": 19186,
       "sha256": "266403f0aa26c9572dec6061b27b984ce11c5053e3b3cb243765011bd9337831",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/cleaned/clarity_device_coverage.parquet",
@@ -1023,7 +1023,7 @@
       "rows": 33,
       "size_bytes": 24779,
       "sha256": "e1c4d9781b8674602b106ab1542383d66a4f80271b4fe798f23ed6a5768dcf2e",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/processed/clarity/clarity_pm25_hourly.parquet",
@@ -1032,7 +1032,7 @@
       "rows": 231316,
       "size_bytes": 5642020,
       "sha256": "961d16b895981daeade9f0b187ab42bbd5a3b011ecb8122dc85e161208ef646a",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/processed/clarity/clarity_pm25_hourly.csv",
@@ -1041,7 +1041,7 @@
       "rows": 231316,
       "size_bytes": 38072600,
       "sha256": "403b00d4e504a8825e0a0edf194d8b7aa0c80bd1b718c3262cf31f07ea21b75c",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/processed/clarity/clarity_daily.parquet",
@@ -1050,7 +1050,7 @@
       "rows": 10122,
       "size_bytes": 243380,
       "sha256": "fd0c6a734feb05855a724c9b196f29c752575ae20b966f42570fa68301e1b30f",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/processed/clarity/clarity_monthly.parquet",
@@ -1059,7 +1059,7 @@
       "rows": 357,
       "size_bytes": 12346,
       "sha256": "ca6bb17f508e6dfe8d9f7f6395090ab2a2c2ab9ac17655612627de59c32f8c01",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/processed/clarity/clarity_device_inventory.csv",
@@ -1068,7 +1068,7 @@
       "rows": 56,
       "size_bytes": 9615,
       "sha256": "0aa0a41c5b64187fd32d409141e9519242ac7d731d0ca2c1f8fde54eaebc9631",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_validation_report.md",
@@ -1077,7 +1077,7 @@
       "rows": null,
       "size_bytes": 14282,
       "sha256": "de17256b061969a4878a92510aa30641f25f87ee5927ec39194106475aa5ffe2",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_timestamp_report.md",
@@ -1086,7 +1086,7 @@
       "rows": null,
       "size_bytes": 3379,
       "sha256": "b66013fb4242fa74288b9a687a3fcc64342ab3ac22bfb7f314dda0b554a16e1c",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_device_coverage_report.md",
@@ -1095,7 +1095,7 @@
       "rows": null,
       "size_bytes": 4914,
       "sha256": "6d52678dc1177685af16c9c2c4da2d6c22a1adfc859a7c0692d0d6beb0e8490d",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_spatial_report.md",
@@ -1104,7 +1104,7 @@
       "rows": null,
       "size_bytes": 5757,
       "sha256": "7a61bae40cd8f4e926932f55898502cf6f06b301f1baff68a685220ef89553c3",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_embassy_comparison.md",
@@ -1113,16 +1113,16 @@
       "rows": null,
       "size_bytes": 7333,
       "sha256": "aa9740e79cd7c2e7e694181f6db052e7ee4257e1a1a74ffe66f37ff2373948f6",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_validation_stats.json",
       "format": "json",
       "role": "validation statistics",
       "rows": null,
-      "size_bytes": 65910,
-      "sha256": "385cf76458a6433f1a478abb62df1c05f64364443f2e726577564ad8c6c82422",
-      "write_status": "unchanged"
+      "size_bytes": 65944,
+      "sha256": "d631f3e6ea92a20a02894fccb11f4c0342a5d9467341c4d7997905cc3cac527c",
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_sheet_inventory.json",
@@ -1131,7 +1131,7 @@
       "rows": null,
       "size_bytes": 4202,
       "sha256": "651860de17c4b3b4631885a2a5365eae5db58e4cd6cb731615fe51df819252e6",
-      "write_status": "unchanged"
+      "write_status": "written"
     },
     {
       "path": "data/interim/clarity/reports/clarity_device_coverage.csv",
@@ -1140,7 +1140,7 @@
       "rows": 33,
       "size_bytes": 10378,
       "sha256": "a6d49fda784864bfc1df6e76118348136ea050b4eb25c2c3b862f2c365c5a139",
-      "write_status": "unchanged"
+      "write_status": "written"
     }
   ],
   "known_limitations": [

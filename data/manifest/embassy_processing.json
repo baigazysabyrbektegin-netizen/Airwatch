@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "stage": "embassy_pm25_processing",
-  "generated_at_utc": "2026-11-10T20:34:11+00:00",
+  "generated_at_utc": "2026-11-17T18:31:15+00:00",
   "processing": {
     "script": "pipeline/process_embassy.py",
     "version": "embassy-clean-1.0.0",
-    "python": "3.13.7",
+    "python": "3.13.14",
     "pandas": "3.1.1",
     "pyarrow": "26.0.1",
     "extraction_tool": "bsdtar 3.8.9 - libarchive 3.8.9 zlib/1.2.13.1-motley liblzma/5.8.3 bz2lib/1.0.8 libzstd/1.5.7 cng/2.0 libb2/bundled"
@@ -37,7 +37,7 @@
         "size_bytes": 803230,
         "md5": "2c72bef74bfa87524476b3c18a636863",
         "sha256": "82a50a2234317e9d27cdd9853775d63803149c5841aac0392c583399ad77ec58",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2019_YTD.csv",
         "extracted_at_utc": "2026-11-10T20:32:39+00:00",
         "rows_read": 7751
@@ -47,7 +47,7 @@
         "size_bytes": 860431,
         "md5": "36fa2d86cfe3f6dc2caacb16a64a064c",
         "sha256": "1c940c884544de1b2654b207129835822d53717c86bc85fa52af4c3e581335d4",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2020_YTD.csv",
         "extracted_at_utc": "2026-11-10T20:32:39+00:00",
         "rows_read": 8653
@@ -57,7 +57,7 @@
         "size_bytes": 841250,
         "md5": "422ace452e6b7da4eb2ac87d52e9ee43",
         "sha256": "d3ce9e1c871cd4045e72134695e3e5874089d398ba155fc98342427c7ddc6e7a",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2021_YTD.csv",
         "extracted_at_utc": "2026-11-10T20:32:39+00:00",
         "rows_read": 8366
@@ -67,7 +67,7 @@
         "size_bytes": 833771,
         "md5": "10a08145862fd5b9a6270c6e05ddc968",
         "sha256": "9479a7b3224cb28d57ef19fb828ac412098ce09d87dbd3ac6337ffbdf8053dcc",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2022_YTD.csv",
         "extracted_at_utc": "2026-11-10T20:32:39+00:00",
         "rows_read": 8236
@@ -77,7 +77,7 @@
         "size_bytes": 856717,
         "md5": "afe46bdb94ebf5dd257bb21d0b306a65",
         "sha256": "d3a49fef07337f469351024b53ecb9f089f25250e4470dda32ebbcbf2459320c",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2023_YTD.csv",
         "extracted_at_utc": "2026-11-10T20:32:39+00:00",
         "rows_read": 8649
@@ -87,7 +87,7 @@
         "size_bytes": 417677,
         "md5": "3f8b4a62f5b8ef72e057f4424a9dac81",
         "sha256": "24fa6c0e78ebf8e2dc870317ceb8f6154a51533c32d13ca4772ef0f35e6c1f1d",
-        "status": "already_extracted_verified",
+        "status": "extracted",
         "local_path": "data/interim/embassy/extracted/Bishkek_PM2.5_2024_YTD.csv",
         "extracted_at_utc": "2026-11-10T20:32:39+00:00",
         "rows_read": 4297
@@ -133,8 +133,8 @@
       "format": "parquet",
       "role": "primary analytical hourly table",
       "rows": 47322,
-      "size_bytes": 1458452,
-      "sha256": "74bd2e417213f35381213ea8e6f05f349853dd9647d790c5ed1931588015cb65"
+      "size_bytes": 1458416,
+      "sha256": "9e6365a4abfe16535d6af5cfd7862e563c94c5f1efef26e677e6f199d857b7e7"
     },
     {
       "path": "data/processed/embassy/embassy_pm25_hourly.csv",
@@ -149,8 +149,8 @@
       "format": "markdown",
       "role": "validation report",
       "rows": null,
-      "size_bytes": 13776,
-      "sha256": "e14af24fefbf49a759f81572d7b7c432545901088528e2137a3eb7f9370e5458"
+      "size_bytes": 13754,
+      "sha256": "6a4fe994455b814de07fb6d5a00c7d633e45d9b7e5da61f7904af5ad4c1e7e4b"
     },
     {
       "path": "data/interim/embassy/reports/embassy_validation_stats.json",
@@ -215,7 +215,7 @@
     "Single monitoring site; hourly values only. No coordinates are in the files (the Embassy location is approximate elsewhere in the project).",
     "The timestamp convention (hour start or end) is not stated in the source; the 1-hour offset seen against the 2021 Clarity data (Stage 3) is not resolved here.",
     "Conflicting duplicate timestamps are excluded rather than resolved; the cause is not documented in the source (US daylight-saving dates in the data: row counts {'2019-03-10': 24, '2019-11-03': 24, '2020-03-08': 24, '2020-11-01': 24, '2021-03-14': 24, '2021-11-07': 24, '2022-03-13': 24, '2022-11-06': 24, '2023-03-12': 24, '2023-11-05': 24, '2024-03-10': 24}).",
-    "QC `Valid` is the provider's flag and the measurement behaviour is not homogeneous over time. Minimum valid raw value by year: {2019: 5.0, 2020: -4.0, 2021: -5.0, 2022: -4.0, 2023: -4.0, 2024: -4.0} (2019 never goes below 5 µg/m³; later years contain near-zero and negative readings). Months where at least 30 % of valid readings are below 5 µg/m³: ['2020-04..2020-09', '2022-05..2022-07', '2023-04..2024-06']. Low shares are partly natural in clean-air summers, so compare winter with winter: Nov–Mar months before 2023-11 range 0.0–15.6 %, while 2023-11 to 2024-03 range 37.9–61.9 %. In some hours near-zero values alternate with ~150 µg/m³ values (e.g. 2024-02-29 22:00). These rows are flagged where detectable (flag_local_drop) but NOT removed or reclassified. The cause is unverified (possible instrument or reporting change); the periods need review before use in modelling or forecast evaluation.",
+    "QC `Valid` is the provider's flag and the measurement behaviour is not homogeneous over time. Minimum valid raw value by year: {2019: 5.0, 2020: -4.0, 2021: -5.0, 2022: -4.0, 2023: -4.0, 2024: -4.0} (2019 never goes below 5 µg/m³; later years contain near-zero and negative readings). Months where at least 30 % of valid readings are below 5 µg/m³: ['2020-04..2020-09', '2022-05..2022-07', '2023-04..2024-06']. Low shares are partly natural in clean-air summers, so compare winter with winter: Nov–Mar months before 2023-11 range 0.0–15.6 %, while 2023-11 to 2024-03 range 37.9–61.9 %. In some hours near-zero values alternate with ~150 µg/m³ values (e.g. 2024-02-29 22:00). These rows are flagged where detectable (flag_local_drop) but NOT removed or reclassified. The cause is unverified (possible instrument or reporting change); the periods need review before further modelling.",
     "Local drop/spike flags only catch isolated values relative to neighbouring hours; they cannot detect an entire low-reading period.",
     "The archive holds yearly 'YTD' files; the 2020 and 2021 files carry an older modification date (Jul 2022) than the others (Jul 2024), so later quality-control revisions, if any, may not be reflected in every year.",
     "Gaps are reported but not imputed in the target; feature interpolation is limited to short gaps.",
