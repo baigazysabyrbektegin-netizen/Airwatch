@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
   "stage": "phase2_weather",
-  "generated_at_utc": "2026-11-11T05:48:14+00:00",
+  "generated_at_utc": "2026-11-17T18:36:45+00:00",
   "processing": {
     "version": "weather-1.0.0",
     "script": "pipeline/process_weather.py",
-    "python": "3.13.7",
+    "python": "3.13.14",
     "pandas": "3.1.1",
     "pyarrow": "26.0.1",
     "platform": "win32"
@@ -38,11 +38,11 @@
     "period_source": "data/manifest/embassy_processing.json"
   },
   "retrieval": {
-    "retrieved_at_utc": "2026-11-11T05:46:34+00:00",
-    "downloaded_in_this_run": false,
+    "retrieved_at_utc": "2026-11-17T18:36:45+00:00",
+    "downloaded_in_this_run": true,
     "http_status": 200,
-    "response_bytes": 2497540,
-    "response_sha256": "5bb4cd0399fb3bb0d22c8643e1a17ffc9fc7ab1f96196d4e728383ef0c19b588",
+    "response_bytes": 2497539,
+    "response_sha256": "99d349cb0e5f356bf1032a091a4d4575e79a9b6b39e7a7e25f5381809a5e9490",
     "raw_file": "data/raw/weather/openmeteo_era5_42.917_74.510_2019-02-06_2024-06-30.json",
     "request_record": "data/raw/weather/openmeteo_era5_42.917_74.510_2019-02-06_2024-06-30.request.json"
   },
@@ -240,20 +240,20 @@
   "outputs": {
     "interim_parsed": {
       "path": "data/interim/weather/era5_hourly_parsed.parquet",
-      "status": "unchanged",
+      "status": "written",
       "sha256": "0e6785b9d9f6efd11994447f19046958436be697b50c5bcdbce9435af526b563",
       "bytes": 1174114
     },
     "processed_hourly": {
       "path": "data/processed/weather/era5_hourly.parquet",
-      "status": "unchanged",
+      "status": "written",
       "sha256": "aa65909995bb0886278d14f3ec0dc1ef3c1e3552ccae5d467fec64432e364a53",
       "bytes": 1174767
     },
     "report": {
       "path": "data/interim/weather/weather_validation_report.md",
-      "status": "overwritten_with_approval",
-      "sha256": "0db7a07fc8976041e7f75f3086f987e61940ceb76b7e46e489f7cb23f819b2fe",
+      "status": "written",
+      "sha256": "4e7c99cc827c7996fc07f3089bf552c0c45826ce0b43516fe22f6556b7ce152b",
       "bytes": 4825
     }
   },

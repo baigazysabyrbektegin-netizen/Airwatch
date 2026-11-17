@@ -16,6 +16,9 @@ class Settings(BaseSettings):
     data_dir: Path = REPO_ROOT / "data"
     # Origins allowed to call the API from a browser (Vite dev server by default).
     cors_origins: list[str] = ["http://localhost:5173", "http://127.0.0.1:5173"]
+    # Built frontend (npm run build). Served at / when present, e.g. in the Docker image; absent in Vite development.
+    static_dir: Path = REPO_ROOT / "frontend" / "dist"
+
     @property
     def raw_dir(self) -> Path:
         return self.data_dir / "raw"
