@@ -1,0 +1,15 @@
+# Render Blueprint: one free Docker web service (API + built frontend + processed data).
+# After making a data release (scripts/pack_data.py), set DATA_URL and DATA_SHA256 below.
+services:
+  - type: web
+    name: airwatch
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: DATA_URL
+        value: https://github.com/baigazysabyrbektegin-netizen/Airwatch/releases/download/data-v1/airwatch-data-20261118.tar.gz
+      - key: DATA_SHA256
+        value: 966fa3e790740b55a47c51dcd6f5bfb2137f43158b1a50893fa7097af8bfe9ce

@@ -46,3 +46,6 @@ data/processed/*
 .DS_Store
 Thumbs.db
 *.log
+
+# Data release archives (scripts/pack_data.py)
+dist-data/

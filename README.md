@@ -78,7 +78,6 @@ Open the URL printed by Vite and check the backend at
 ## Run the backend
 From the repository root (Windows PowerShell), so the root-level `pipeline/` package is importable:
 ```powershell
-cd C:\Bishkek_pollution_project
 $env:PYTHONPATH = "."
 .\backend\.venv\Scripts\python.exe -m uvicorn app.main:app --app-dir backend --reload --port 8000
 ```
@@ -123,6 +122,26 @@ Open the address Vite prints (normally <http://localhost:5173>; it picks the nex
 Requests to `/api/*` are proxied to the backend on port 8000, so start the backend first.
 The basemap comes from OpenFreeMap (no key needed); without internet the data layers still draw on a plain background.
 Other scripts: `npm test`, `npm run lint`, `npm run build`.
+
+## Deploy (Render, one Docker image)
+The image contains the API, the processed data and the built frontend; FastAPI serves the frontend at `/` when
+`frontend/dist` exists, so the site and `/api` share one origin. The pipeline is **not** run on the server.
+
+1. Build the data locally (see above), then pack it:
+   `backend\.venv\Scripts\python.exe scripts\pack_data.py` — prints the archive path and its SHA-256.
+2. Upload the archive to a GitHub Release (for example tag `data-v1`), or
+   `gh release create data-v1 dist-datairwatch-data-YYYYMMDD.tar.gz`.
+3. Put the asset URL and SHA-256 into `render.yaml` (`DATA_URL`, `DATA_SHA256`), commit and push.
+4. On render.com: **New → Blueprint**, pick this repository. Render passes the env vars to the Docker build
+   as build args; the build fails if the checksum does not match.
+
+Check locally first, with the free-plan memory limit:
+```powershell
+docker build --build-arg DATA_URL=<asset url> --build-arg DATA_SHA256=<sha256> -t airwatch .
+docker run --rm -m 512m -p 8000:8000 airwatch
+```
+Open <http://localhost:8000> and watch `docker stats`. The free plan sleeps after 15 minutes without visits; the
+first request afterwards takes about a minute.
 
 ## Data rules
 - Raw datasets are downloaded by scripts into `data/raw/` and are **git-ignored**.

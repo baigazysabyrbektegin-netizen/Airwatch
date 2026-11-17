@@ -1,6 +1,9 @@
+from pathlib import Path
+
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
+from fastapi.responses import FileResponse, JSONResponse
+from fastapi.staticfiles import StaticFiles
 
 from app import __version__
 from app.api import explorer, grid, health, layers, measurements, metadata, planner, stations, weather
@@ -8,7 +11,7 @@ from app.core.config import settings
 from app.services.errors import BadQuery, DataUnavailable, NotFound
 
 
-def create_app() -> FastAPI:
+def create_app(static_dir: Path | None = None) -> FastAPI:
     app = FastAPI(
         title=settings.app_name,
         version=__version__,
@@ -37,7 +40,27 @@ def create_app() -> FastAPI:
     async def _bad_query(_: Request, exc: BadQuery):
         return JSONResponse(status_code=422, content={"error": "invalid_query", "message": exc.message, "allowed": exc.allowed})
 
+    _serve_frontend(app, static_dir or settings.static_dir)
     return app
+
+
+def _serve_frontend(app: FastAPI, dist: Path) -> None:
+    """Serve the built frontend from one origin with the API (Docker deploy). No-op without a build."""
+    index = dist / "index.html"
+    if not index.is_file():
+        return
+    root = dist.resolve()
+    if (root / "assets").is_dir():
+        app.mount("/assets", StaticFiles(directory=root / "assets"), name="assets")
+
+    @app.get("/{path:path}", include_in_schema=False)
+    def _spa(path: str):
+        if path == "api" or path.startswith("api/"):
+            return JSONResponse(status_code=404, content={"error": "not_found", "message": f"Unknown API path: /{path}", "available": []})
+        file = (root / path).resolve()
+        if path and file.is_file() and file.is_relative_to(root):
+            return FileResponse(file)
+        return FileResponse(index)  # client-side routes fall back to the app shell
 
 
 app = create_app()
